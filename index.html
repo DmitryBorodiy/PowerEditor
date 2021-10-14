@@ -12,13 +12,15 @@
 
   <!-- Custom Styles -->
   <link rel="stylesheet" href="style.css" />
+  <script src="main.js"></script>
+  <script src="mobile.js"></script>
   <link rel="stylesheet" href="https://unpkg.com/browse/@n8d/htwoo-core@<version>/dist/css/htwoo.min.css">
   <script src="https://unpkg.com/browse/@n8d/htwoo-core@<version>/dist/js/"></script>
 </head>
 
-<body class="system-chrome-alt-high-color">
+<body class="system-chrome-alt-high-color" onresize="DetectMobileMode();">
   <header class="navbar">
-    
+    <img id="logo_img" src="img/app_logo.png" alt="logo_img" />
   </header>
 </body>
 </html>

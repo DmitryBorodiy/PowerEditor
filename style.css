@@ -16,3 +16,11 @@ body {
     -webkit-backdrop-filter: blur(50px);
     backdrop-filter: blur(50px);
 }
+
+#logo_img {
+    height: 45px;
+    width: 45px;
+    position: relative;
+    top: 14px;
+    left: 16px;
+}
