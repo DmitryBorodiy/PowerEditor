@@ -5,12 +5,12 @@ body {
 }
 
 .system-chrome-alt-high-color {
-    background-color: #DBDBDB;
+    background-color: #202020;
 }
 
-.navbar{
-    background-color: rgba(255, 255, 255, 0.7);
-    height: 75px;
+.navbar {
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 60px;
     width: 100%;
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
     -webkit-backdrop-filter: blur(50px);
