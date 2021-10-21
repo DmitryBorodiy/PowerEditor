@@ -1,7 +1,45 @@
+﻿@font-face{
+    font-family: "Fluent-Icons-Regular";
+    src: url("fonts/FluentSystemIcons-Regular.ttf");
+}
+
 body {
     font-size: 15pt;
     padding: 0px;
     margin: 0px;
+}
+
+.fluent_icons{
+    font-family: "Fluent-Icons-Regular";
+    font-style: normal;
+}
+
+.activated-menu-item{
+    border-style: none;
+    background-color: white;
+    box-shadow: 0 4px 3px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    height: 36px;
+    width: 90px;
+    color: rgb(25, 25, 25);
+}
+
+.activated-menu-item:hover{
+    background-color: rgb(240, 240, 240);
+    box-shadow: 0 5px 3px rgba(0, 0, 0, 0.2);
+}
+
+.vertical-separator{
+    width: 1px;
+    height: 25px;
+    background-color: rgb(50, 50, 50);
+    position: absolute;
+    top: 24px;
+    left: 82px;
+}
+
+.menu-item-text{
+
 }
 
 .system-chrome-alt-high-color {
