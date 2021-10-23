@@ -1,7 +1,8 @@
 ﻿@import url('http://fonts.cdnfonts.com/css/segoe-ui-4');
 
     :root {
-        --theme-primary-color: #0064ffff;
+        --theme-primary-color: #1284FF;
+        --theme-primary-color-focus: #00A4FF;
         --white: #ffffffff;
         --black: #000000ff;
         --neutral-light-color: #ccccccff;
@@ -13,6 +14,33 @@
         box-sizing: border-box;
         box-shadow: 0px 1.2px 1px rgba(0, 0, 0, 0.35);
         border-radius: 6px;
+    }
+
+    .ms-button-accent{
+        background: var(--theme-primary-color);
+        border: none;
+        box-sizing: border-box;
+        box-shadow: 0px 1.2px 1px rgba(0, 0, 0, 0.35);
+        border-radius: 6px;
+        color: white;
+    }
+
+    .ms-button-accent:hover{
+        background: var(--theme-primary-color-focus);
+        border: none;
+        box-sizing: border-box;
+        box-shadow: 0px 1.2px 1px rgba(0, 0, 0, 0.40);
+        border-radius: 6px;
+        color: white;
+    }
+
+    .ms-button-accent:active{
+        background: var(--theme-primary-color-focus);
+        border: none;
+        box-sizing: border-box;
+        box-shadow: 0px 1.2px 8px rgba(0, 0, 0, 0.45);
+        border-radius: 6px;
+        color: white;
     }
 
     .ms-menu-button-selected{
@@ -28,17 +56,28 @@
     .ms-menu-button{
         border-style: none; 
         box-shadow: none;
+        background-color: transparent;
         border-radius: 6px;
         height: 36px;
         width: auto; 
     }
 
     .ms-menu-button:hover{
+        background-color: white;
         border-style: none; 
         box-shadow: none;
         border-radius: 6px;
         height: 36px;
         width: auto; 
+    }
+
+    .ms-menu-button:active{
+        border-style: none;
+        border-radius: 6px;
+        height: 36px;
+        width: auto; 
+        background-color: rgb(245, 245, 245);
+        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.40);
     }
 
     .ms-menu{
@@ -47,7 +86,7 @@
 
     .ms-menu-item{
         display: inline-block;
-        margin: 1px;
+        margin: 3px;
     }
 
     h1{

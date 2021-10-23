@@ -64,3 +64,11 @@ body {
     top: 14px;
     left: 16px;
 }
+
+#send_review_button{
+    position: fixed;
+    top: 18px;
+    right: 20px;
+    height: 36px;
+    width: 100px;
+}
