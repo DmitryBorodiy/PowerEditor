@@ -9,9 +9,11 @@ body {
     margin: 0px;
 }
 
-.fluent_icons{
+.fluent-icons{
     font-family: "Fluent-Icons-Regular";
+    font-size: 24px;
     font-style: normal;
+    display: inline-block;
 }
 
 .activated-menu-item{

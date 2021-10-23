@@ -19,7 +19,7 @@ function DetectMobileMode(){
       document.getElementById("logo_img").style.left = "0px";
       document.getElementsByClassName("navbar")[0].style.textAlign = "center";
 
-      document.getElementById("home-command").style.visibility = "collapse";
+      document.getElementById("desktop_menu").style.visibility = "collapse";
       document.getElementById("navbar_separator").style.visibility = "collapse";
     }
     else if(documentWidthProperty >= 560){
@@ -27,7 +27,7 @@ function DetectMobileMode(){
       document.getElementById("logo_img").style.left = "16px";
       document.getElementsByClassName("navbar")[0].style.textAlign = "left";
 
-      document.getElementById("home-command").style.visibility = "visible";
+      document.getElementById("desktop_menu").style.visibility = "visible";
       document.getElementById("navbar_separator").style.visibility = "visible";
     }
   }

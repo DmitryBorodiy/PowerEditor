@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Power Editor - best way to edit your code.</title>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- WinUI WASM -->
+  <link rel="stylesheet" href="styles/winui-web.css" />
+
+  <script src="main.js"></script>
+  <script src="mobile.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/browse/@n8d/htwoo-core@<version>/dist/css/htwoo.min.css">
+  <script src="https://unpkg.com/browse/@n8d/htwoo-core@<version>/dist/js/"></script>
+</head>
+
+<body class="system-chrome-alt-high-color" onresize="DetectMobileMode();">
+  <header class="navbar">
+    <img id="logo_img" src="img/app_logo.png" alt="logo_img" />
+    <div id="navbar_separator" class="vertical-separator" />
+    <div id="desktop_menu" class="ms-menu" style="position: fixed; top: 17px; left: 105px;">
+      <div class="ms-menu-item">
+        <button class="ms-menu-button-selected" style="width: 81px;">
+            <span class="button_content">
+                <i class="fluent-icons"></i>
+                <span class="menu-button-label">Home</span>
+            </span>
+        </button>
+      </div>
+    </div>
+  </header>
+</body>
+</html>
