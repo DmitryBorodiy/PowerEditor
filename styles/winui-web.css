@@ -1,19 +1,135 @@
-﻿@import url('http://fonts.cdnfonts.com/css/segoe-ui-4');
+@import url('http://fonts.cdnfonts.com/css/segoe-ui-4');
 
-    :root {
-        --theme-primary-color: #1284FF;
-        --theme-primary-color-focus: #00A4FF;
-        --white: #ffffffff;
-        --black: #000000ff;
-        --neutral-light-color: #ccccccff;
-    }
+@media(prefers-color-scheme: light){
+  :root {
+    --theme-primary-color: #1284FF;
+    --theme-primary-color-focus: #00A4FF;
+    --white: #ffffffff;
+    --black: #000000ff;
+    --neutral-light-color: rgb(220, 220, 220);
+  }
+  
+  input{
+    color: black;
+  }
+  
+  .ms-textbox{
+    background-color: white;
+    border: 0.9px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  .ms-textbox:focus-within{
+    background-color: rgb(245, 245, 245);
+  }
+  
+  button{
+    background: #FFFFFF;
+    color: black;
+  }
+  
+  .ms-menu-button-selected{
+    background: #FFFFFF;
+  }
+  
+  .ms-menu-button-selected:hover{
+    background: rgb(245, 245, 245);
+  }
+  
+  .ms-menu-button:hover{
+    background-color: white;
+  }
+  
+  .ms-menu-button:active{
+    background-color: rgb(245, 245, 245);
+  }
+}
+
+@media(prefers-color-scheme: dark){
+  :root {
+    --theme-primary-color: #1284FF;
+    --theme-primary-color-focus: #00A4FF;
+    --white: #ffffffff;
+    --black: #000000ff;
+    --neutral-light-color: rgb(45, 45, 45);
+  }
+  
+  button{
+    background-color: rgb(26, 26, 26);
+    color: white;
+  }
+  
+  input{
+    color: white;
+  }
+  
+  .ms-textbox{
+    background-color: rgb(25, 25, 25);
+    border: 0.9px solid rgba(180, 180, 180, 0.1);
+  }
+  
+  .ms-textbox:focus-within{
+    background-color: rgb(15, 15, 15);
+  }
+  
+  .ms-menu-button-selected{
+    background-color: rgb(26, 26, 26);
+  }
+  
+  .ms-menu-button-selected:hover{
+    background-color: rgb(15, 15, 15);
+  }
+  
+  .ms-menu-button:hover{
+    background-color: rgb(25, 25, 25);
+  }
+  
+  .ms-menu-button:active{
+    background-color: rgb(15, 15, 15);
+  }
+}
 
     button{
-        background: #FFFFFF;
         border: 0.1px solid rgba(0, 0, 0, 0.1);
         box-sizing: border-box;
         box-shadow: 0px 1.2px 1px rgba(0, 0, 0, 0.35);
         border-radius: 6px;
+    }
+    
+    input{
+      border-style: none;
+      background-color: transparent;
+      justify-content: center;
+      text-align: left;
+    }
+    
+    .ms-text-input {
+      width: 100%;
+      height: 100%;
+      margin-left: 10px;
+    }
+    
+    .ms-text-input:focus{
+      border-color: transparent;
+      outline: none;
+    }
+    
+    .ms-textbox {
+      box-sizing: border-box;
+      box-shadow: 0px 1.2px 1px rgba(0, 0, 0, 0.35);
+      border-radius: 6px;
+    }
+    
+    .ms-textbox:focus-within{
+      border: 2px solid var(--theme-primary-color);
+    }
+    
+    .ms-textbox-icon {
+      display: flex;
+      position: relative;
+      float: right;
+      right: 10px;
+      bottom: 27px;
+      font-size: 16px;
     }
 
     .ms-button-accent{
@@ -44,7 +160,6 @@
     }
 
     .ms-menu-button-selected{
-        background: #FFFFFF;
         border: 0.1px solid rgba(0, 0, 0, 0.1);
         box-sizing: border-box;
         box-shadow: 0px 1.2px 1px rgba(0, 0, 0, 0.35);
@@ -63,7 +178,6 @@
     }
 
     .ms-menu-button:hover{
-        background-color: white;
         border-style: none; 
         box-shadow: none;
         border-radius: 6px;
@@ -76,7 +190,6 @@
         border-radius: 6px;
         height: 36px;
         width: auto; 
-        background-color: rgb(245, 245, 245);
         box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.40);
     }
 

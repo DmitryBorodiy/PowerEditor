@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -12,6 +12,7 @@
 
   <!-- WinUI WASM -->
   <link rel="stylesheet" href="styles/winui-web.css" />
+  <link rel="stylesheet" href="fonts/FluentSystemIcons-Regular.css" />
 
   <script src="main.js"></script>
   <script src="mobile.js"></script>
@@ -48,16 +49,29 @@
             </span>
         </button>
       </div>
+      <div class="ms-menu-item">
+        <button class="ms-menu-button" style="width: auto;">
+          <span class="button_content">
+            <i class="fluent-icons icon-ic_fluent_settings_20_regular">&#xE700;</i>
+            <span class="menu-button-label">Settings</span>
+          </span>
+        </button>
+      </div>
+    </div>
+    <div id="SearchBoxControl" class="ms-textbox" style="position: absolute; top: 18px; right: 130px; height: 35px; width: 220px;">
+      <input id="SearchBoxInput" class="ms-text-input" type="text" placeholder="Search here..." autocomplete="true" />
+      <i class="ms-textbox-icon icon-ic_fluent_search_20_regular"></i>
     </div>
     <button id="send_review_button" class="ms-button-accent">
         <span class="button_label">Send review</span>
     </button>
   </header>
-  <div class="progress-ring" style="margin-top: 100px; margin-left: 100px;">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" class="ring">
-        <circle class="static" cx="50%" cy="50%" r="43.75%"></circle>
-        <circle class="dynamic" cx="50%" cy="50%" r="43.75%"></circle>
-    </svg>
+  <div id="content">
+    <section id="start">
+      <div id="start_content">
+        
+      </div>
+    </section>
   </div>
 </body>
 </html>

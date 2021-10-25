@@ -1,4 +1,52 @@
-﻿@font-face{
+@media(prefers-color-scheme: light){
+  body{
+    background-color: rgb(245, 245, 245);
+    color: black;
+  }
+  
+  .navbar{
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+  
+  .vertical-separator{
+    background-color: rgb(50, 50, 50);
+  }
+  
+  .system-chrome-alt-high-color{
+    background-color: #DBDBDB;
+  }
+  
+  #start_content{
+    background-color: white;
+    background-image: url('img/light_background.jpg');
+  }
+}
+
+@media(prefers-color-scheme: dark){
+  body{
+    background-color: rgb(35, 35, 35);
+    color: white;
+  }
+  
+  .navbar{
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  
+  .vertical-separator{
+    background-color: rgb(220, 220, 220);
+  }
+  
+  .system-chrome-alt-high-color{
+    background-color: rgb(30, 30, 30);
+  }
+  
+  #start_content{
+    background-color: black;
+    background-image: url('img/dark_background.jpg');
+  }
+}
+
+@font-face{
     font-family: "Fluent-Icons-Regular";
     src: url("fonts/FluentSystemIcons-Regular.ttf");
 }
@@ -11,7 +59,7 @@ body {
 
 .fluent-icons{
     font-family: "Fluent-Icons-Regular";
-    font-size: 24px;
+    font-size: 20px;
     font-style: normal;
     display: inline-block;
 }
@@ -34,7 +82,6 @@ body {
 .vertical-separator{
     width: 1px;
     height: 25px;
-    background-color: rgb(50, 50, 50);
     position: absolute;
     top: 24px;
     left: 82px;
@@ -45,16 +92,35 @@ body {
 }
 
 .system-chrome-alt-high-color {
-    background-color: #DBDBDB;
+    
 }
 
 .navbar{
-    background-color: rgba(255, 255, 255, 0.7);
     height: 75px;
     width: 100%;
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
     -webkit-backdrop-filter: blur(50px);
     backdrop-filter: blur(50px);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+}
+
+#content{
+  width: 100%;
+  height: auto;
+}
+
+#start{
+  width: 100%;
+  height: auto;
+}
+
+#start_content{
+  width: 100%;
+  height: 760px;
+  background-size: cover;
 }
 
 #logo_img {
