@@ -1,4 +1,4 @@
-window.onload = function(){
+﻿window.onload = function(){
   ThemeInitialize();
 };
 
@@ -40,4 +40,8 @@ function ThemeInitialize(){
   catch(e){
     console.log(e.toString());
   }
+}
+
+function Animate(){
+  
 }
