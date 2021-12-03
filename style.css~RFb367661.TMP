@@ -75,12 +75,6 @@
     left: 5px;
 }
 
-#desktop_menu{
-    position: fixed; 
-    top: 17px; 
-    left: 196px;
-}
-
 @font-face{
     font-family: "Fluent-Icons-Regular";
     src: url("fonts/FluentSystemIcons-Regular.ttf");
@@ -118,18 +112,8 @@ body {
     width: 1px;
     height: 25px;
     position: absolute;
-    top: 25px;
-    left: 177px;
-}
-
-#page-description{
-    position: relative;
-    top: 95px;
-    font-size: 24px;
-    animation-duration: 2s;
-    animation-name: start;
-    margin-left: 30px;
-    margin-right: 30px;
+    top: 24px;
+    left: 82px;
 }
 
 .menu-item-text{
@@ -172,7 +156,7 @@ body {
 
 #start_content{
   width: 100%;
-  height: 900px;
+  height: 760px;
   background-size: cover;
   background-position: center center;
   text-align: center;
@@ -187,8 +171,8 @@ body {
     position: fixed;
     top: 18px;
     right: 20px;
-    height: 35px;
-    width: 110px;
+    height: 36px;
+    width: 100px;
 }
 
 #page-title{
@@ -202,25 +186,7 @@ body {
     animation-duration: 2.5s;
 }
 
-#start-buttons-grid{
-    animation-name: start-buttons;
-    animation-duration: 3.5s;
-    /*animation-delay: 5s; */
-    /*opacity: 0; */
-}
-
 @keyframes start{
-    from{
-        transform: scale(0.1);
-        opacity: 0;
-    }
-    to{
-        transform: scale(1);
-        opacity: 1;
-    }
-}
-
-@keyframes start-buttons{
     from{
         transform: scale(0.1);
         opacity: 0;
