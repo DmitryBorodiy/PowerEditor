@@ -1,0 +1,195 @@
+@media (prefers-color-scheme: light) {
+  body {
+    background-color: rgb(224, 224, 224);
+    color: rgb(20, 20, 20);
+  }
+  
+  .ms-mica{
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+  
+  #search-box-ui {
+    position: absolute;
+    top: 20px;
+    right: 118px;
+    float: right;
+    width: 300px;
+  }
+  
+  .app-icon{
+    border: 0.3px solid rgba(200, 200, 200, 0.7);
+    background-color: rgba(246, 246, 246, 0.9);
+    backdrop-filter: blur(45px);
+    -webkit-backdrop-filter: blur(45px);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: rgb(35, 35, 35);
+    color: rgb(250, 250, 250);
+  }
+  
+  .ms-mica {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  
+  #search-box-ui {
+    position: absolute;
+    top: 22px;
+    right: 94px;
+    float: right;
+    width: 300px;
+  }
+  
+  .app-icon {
+    border: 0.3px solid rgba(20, 20, 20, 0.7);
+    background-color: rgba(35, 35, 35, 0.8);
+    backdrop-filter: blur(45px);
+    -webkit-backdrop-filter: blur(45px);
+  }
+}
+
+body {
+  padding: 0px;
+  margin: 0px;
+  font-family: 'Segoe UI', sans-serif;
+  height: 100%;
+}
+
+h1{
+  font-family: 'Segoe UI', sans-serif;
+  font-weight: bold;
+}
+
+header{
+  width: 100%;
+  height: 76px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  z-index: 111111111111;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+}
+
+.ms-mica{
+  backdrop-filter: blur(60px);
+  -webkit-backdrop-filter: blur(60px);
+}
+
+#app-nav-logo{
+  position: relative;
+  left: 18px;
+  top: 50%;
+  transform: translate(0, -50%);
+  margin-top: -1px;
+}
+
+#nav-bar-title{
+  position: relative;
+  font-size: 22px;
+  left: 26px;
+  top: 2px;
+}
+
+#get-app-command{
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  height: 40px;
+  width: 150px;
+}
+
+#search-box-ui{
+  position: absolute;
+  top: 22px;
+  width: 300px;
+}
+
+#search-icon{
+  position: relative;
+  top: -7px;
+  right: 26px;
+}
+
+#nav-menu{
+  position: fixed;
+  top: 22px;
+  left: 150px;
+}
+
+#contentLayout{
+  width: 100%;
+  height: 100%;
+}
+
+.nav-menu-item{
+  margin-right: 8px;
+  margin-left: 8px;
+}
+
+.table{
+  display: table;
+  text-align: center;
+  width: auto;
+}
+
+iframe{
+  border: none;
+  position: fixed;
+  height: 100%;
+  z-index: 1;
+}
+
+/* home page styles */
+
+#getting-started{
+  width: 100%;
+  height: 660px;
+  background-color: rgb(80, 80, 80);
+  background-image: url('../assets/power-editor-background.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  display: table;
+  text-align: center;
+}
+
+#getting-started-div{
+  max-width: 600px;
+  position: relative;
+  text-align: center;
+  display: inline-block;
+  padding: 0px;
+  color: rgb(50, 50, 50);
+  top: 142px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.app-icon{
+  display: inline-block;
+  border-radius: 10px;
+  box-shadow: 0 5px 9px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  height: 108px;
+  width: 108px;
+}
+
+.app-icon-picture{
+  height: 70px;
+  width: 70px;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-74%, -50%);
+}
+
+#progress-ui{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  visibility: collapse;
+  z-index: 20;
+}

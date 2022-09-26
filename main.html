@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <!-- ReactJS -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    
+    <!-- jQuery -->
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.js"></script>
+    
+    <!-- WinUI -->
+    <script type="module" src="https://unpkg.com/@fluentui/web-components"></script>
+    <script type="module" src="https://unpkg.com/@fluentui/web-components"></script>
+    <link rel="stylesheet" href="fonts/FluentSystemIcons-Regular.css" />
+    
+    <title>Power Editor - modern & powerful text editor for Windows</title>
+    
+    <!-- Local -->
+    <link rel="stylesheet" href="css/style.css" />
+    <script type="module" src="main.js"></script>
+  </head>
+  <body id="rootLayout">
+    <fluent-design-system-provider id="fluent-design-provider">
+      <header id="nav-header" class="ms-mica">
+        <img id="app-nav-logo" height="45px" width="45px" src="assets/app-logo.png" />
+        <a id="nav-bar-title">Editor</a>
+        <fluent-button id="get-app-command" appearance="accent">Get Power Editor</fluent-button>
+        <span id="search-box-ui">
+          <fluent-text-field id="search-box-input" appearance="outline" placeholder="Search here"></fluent-text-field>
+          <i id="search-icon" class="icon icon-ic_fluent_search_20_regular"></i>
+        </span>
+        <div id="nav-menu">
+          <fluent-tabs id="top-menu-ui" activeid="home">
+            <fluent-tab id="home" class="nav-menu-item">
+              <div class="table" style="position: relative; right: 6px;">
+                <i class="icon icon-ic_fluent_home_20_regular" style="font-size: 20px;display:inline-block;"></i>
+                <a style="position: relative; bottom: 6px; left: 6px; display: inline-block;">Home</a>
+              </div>
+            </fluent-tab>
+            <fluent-tab id="news" class="nav-menu-item">
+              <div class="table" style="position: relative; right: 6px;">
+                <i class="icon icon-ic_fluent_news_20_regular" style="font-size: 20px;display:inline-block;"></i>
+                <a style="position: relative; bottom: 6px; left: 6px; display: inline-block;">What's new?</a>
+              </div>
+            </fluent-tab>
+            <fluent-tab id="downloads" class="nav-menu-item">
+              <div class="table" style="position: relative; right: 6px;">
+                <i class="icon icon-ic_fluent_arrow_download_20_regular" style="font-size: 20px;display:inline-block;"></i>
+                <a style="position: relative; bottom: 6px; left: 6px; display: inline-block;">Downloads</a>
+              </div>
+            </fluent-tab>
+            <fluent-tab id="feedback" class="nav-menu-item">
+              <div class="table" style="position: relative; right: 6px;">
+                <i class="icon icon-ic_fluent_person_feedback_20_regular" style="font-size: 20px;display:inline-block;"></i>
+                <a style="position: relative; bottom: 6px; left: 6px; display: inline-block;">Send feedback</a>
+              </div>
+            </fluent-tab>
+            <fluent-tab-panel id="appsPanel"></fluent-tab-panel>
+            <fluent-tab-panel id="entreesPanel"></fluent-tab-panel>
+            <fluent-tab-panel id="dessertsPanel"></fluent-tab-panel>
+            <fluent-tab-panel id="feedbackPanel"></fluent-tab-panel>
+          </fluent-tabs>
+        </div>
+      </header>
+      <div id="contentLayout">
+        <fluent-progress-ring id="progress-ui"></fluent-progress-ring>
+        <iframe id="rootFrame" src="pages/home.html" />
+      </div>
+    </fluent-design-system-provider>
+  </body>
+</html>

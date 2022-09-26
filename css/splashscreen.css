@@ -1,0 +1,47 @@
+@media (prefers-color-scheme: light){
+  body{
+    background-color: rgb(246, 246, 246);
+  }
+}
+
+@media (prefers-color-scheme: dark){
+  body {
+    background-color: rgb(35, 35, 35);
+  }
+}
+
+body{
+  padding: 0px;
+  margin: 0px;
+  text-align: center;
+  justify-content: center;
+  justify-self: center;
+  align-items: center;
+  vertical-align: center;
+  height: 100%;
+  display: flex;
+}
+
+#app-logo{
+  position: absolute;
+  display: inline-block;
+  top: 50%;
+  transform: translate(0, -50%);
+  animation-name: app-logo-animate;
+  animation-play-state: running;
+  animation-duration: 5.3s;
+  animation-iteration-count: infinite;
+  margin-top: -40px;
+}
+
+@keyframes app-logo-animate{
+  0%{
+    transform: scale(1);
+  }
+  50%{
+    transform: scale(0.9);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
