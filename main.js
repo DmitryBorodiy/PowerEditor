@@ -1,9 +1,11 @@
-import {
+﻿import {
   StandardLuminance,
   baseLayerLuminance,
   fillColor,
   allComponents,
-  provideFluentDesignSystem
+  accentBaseColor,
+  provideFluentDesignSystem,
+  SwatchRGB
 } from "https://unpkg.com/@fluentui/web-components@2.0.0";
 
 import{
@@ -28,8 +30,13 @@ var GetAppCommandUI;
 var NavBarMenu;
 var RootFrame;
 var SearchBoxInput;
+var SearchBoxIcon;
 var TopMenuUI;
 var ProgressUI;
+var CompactMenuButton;
+var MSStoreCompactButton;
+var CompactHomeButton;
+var CompactReviewButton;
 
 //Mobile UI controls
 var MobileMenuButtonUI;
@@ -80,6 +87,9 @@ function Page_OnLoaded(){
     if(RootFrame != null){
       RootFrame.width = pageWidth;
       RootFrame.height = pageHeight;
+
+      ShowProgressUI(true, 800);
+      RootFrame.src = "pages/home.html";
     }
     
     //Header component logic
@@ -91,26 +101,38 @@ function Page_OnLoaded(){
     GetAppCommandUI = document.getElementById("get-app-command");
     NavBarMenu = document.getElementById("nav-menu");
     SearchBoxInput = document.getElementById("search-box-input");
+    SearchBoxIcon = document.getElementById("search-icon");
     TopMenuUI = document.getElementById("top-menu-ui");
     ProgressUI = document.getElementById("progress-ui");
+    CompactMenuButton = document.getElementById("compact-menu-button");
+    MSStoreCompactButton = document.getElementById("ms-store-button");
+    CompactHomeButton = document.getElementById("compact-home-button");
+    CompactReviewButton = document.getElementById("compact-review-button");
     
     SearchBoxInput.addEventListener("keydown", SearchBox_KeyDown);
-    
+    SearchBoxIcon.onclick = function(){
+        SearchWeb(SearchBoxInput.value.toString());
+    };
+
+    MSStoreCompactButton.addEventListener("click", InstallOrGetApp);    
     GetAppCommandUI.addEventListener("click", InstallOrGetApp);
+    CompactHomeButton.onclick = function(){
+        SetFramePage("pages/home.html");
+    };
     
     searcBoxUI = document.getElementById("search-box-ui");
     
     TopMenuUI.children[0].onclick = function(){
-      SetFramePage("pages/home.html");
+      SetFramePage("pages/home.html", 1000);
     };
     
     var pageWidth = parseInt(rootLayout.clientWidth);
     
     if (pageWidth != null) {
-      if (pageWidth <= 450) {
+      if (pageWidth <= 1050) {
         SetMobileView();
       }
-      else if (pageWidth > 450) {
+      else if (pageWidth > 1050) {
         SetDefaultView();
       }
     }
@@ -131,10 +153,10 @@ function Page_SizeChanged(){
       console.log(pageWidth);
       
       if(pageWidth != null){
-        if(pageWidth <= 450){
+        if(pageWidth <= 1050){
           SetMobileView();
         }
-        else if(pageWidth > 450){
+        else if(pageWidth > 1050){
           SetDefaultView();
         }
       }
@@ -150,6 +172,51 @@ function Page_SizeChanged(){
   }
 }
 
+function SetNavigationViewItemsVisible(itemsCount){
+    try{
+        switch(itemsCount){
+            case 0:
+
+            break;
+            case 1:
+                TopMenuUI.children[0].style.visibility = "visible";
+                TopMenuUI.children[1].style.visibility = "collapse";
+                TopMenuUI.children[2].style.visibility = "collapse";
+                TopMenuUI.children[3].style.visibility = "collapse";
+
+                NavBarMenuContextButton.style.left = "-403px";
+            break;
+            case 2:
+                TopMenuUI.children[0].style.visibility = "visible";
+                TopMenuUI.children[1].style.visibility = "visible";
+                TopMenuUI.children[2].style.visibility = "collapse";
+                TopMenuUI.children[3].style.visibility = "collapse";
+
+                NavBarMenuContextButton.style.left = "-275px";
+            break;
+            case 3:
+                TopMenuUI.children[0].style.visibility = "visible";
+                TopMenuUI.children[1].style.visibility = "visible";
+                TopMenuUI.children[2].style.visibility = "visible";
+                TopMenuUI.children[3].style.visibility = "collapse";
+
+                NavBarMenuContextButton.style.left = "-156px";
+            break;
+            case 4:
+                TopMenuUI.children[0].style.visibility = "visible";
+                TopMenuUI.children[1].style.visibility = "visible";
+                TopMenuUI.children[2].style.visibility = "visible";
+                TopMenuUI.children[3].style.visibility = "visible";
+
+                NavBarMenuContextButton.style.left = "-13px";
+            break;
+        }
+    }
+    catch(e){
+        console.log(e.toString());
+    }
+}
+
 function SetMobileView(){
   try{
     header.style.height = "70px";
@@ -161,6 +228,10 @@ function SetMobileView(){
     NavBarTitle.style.visibility = "collapse";
     GetAppCommandUI.style.visibility = "collapse";
     NavBarMenu.style.visibility = "collapse";
+    CompactMenuButton.style.visibility = "visible";
+    CompactHomeButton.style.visibility = "visible";
+    MSStoreCompactButton.style.visibility = "visible";
+    CompactReviewButton.style.visibility = "visible";
     
     searcBoxUI.style.visibility = "collapse";
   }
@@ -180,6 +251,10 @@ function SetDefaultView() {
     NavBarTitle.style.visibility = "visible";
     GetAppCommandUI.style.visibility = "visible";
     NavBarMenu.style.visibility = "visible";
+    CompactMenuButton.style.visibility = "collapse";
+    CompactHomeButton.style.visibility = "collapse";
+    MSStoreCompactButton.style.visibility = "collapse";
+    CompactReviewButton.style.visibility = "collapse";
     
     searcBoxUI.style.visibility = "visible";
   }
@@ -234,7 +309,7 @@ function SearchBox_KeyDown(args){
   try{
     if(args.key == "Enter"){
       if(SearchBoxInput != null){
-        ShowProgressUI(true);
+        ShowProgressUI(true, 2750);
         
         console.log(SearchBoxInput.value);
         SearchWeb(SearchBoxInput.value.toString());
@@ -246,9 +321,9 @@ function SearchBox_KeyDown(args){
   }
 }
 
-function SetFramePage(page){
+function SetFramePage(page, loadTime){
   try{
-    ShowProgressUI(true);
+    ShowProgressUI(true, loadTime);
     
     RootFrame.src = page.toString();
   }
@@ -257,12 +332,12 @@ function SetFramePage(page){
   }
 }
 
-function ShowProgressUI(isShow){
+function ShowProgressUI(isShow, time){
   try{
     if(isShow == true){
       ProgressUI.style.visibility = "visible";
       
-      setTimeout(() => { ProgressUI.style.visibility = "collapse"; }, 2750);
+      setTimeout(() => { ProgressUI.style.visibility = "collapse"; }, parseInt(time));
     }
     else{
       ProgressUI.style.visibility = "collapse";

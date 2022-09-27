@@ -1,4 +1,4 @@
-@font-face {
+﻿@font-face {
     font-family: "FluentSystemIcons-Regular";
     src: url("./FluentSystemIcons-Regular.woff2?ad773ba03a4608dcc2a45393c228d945") format("woff2"),
 url("./FluentSystemIcons-Regular.woff?ad773ba03a4608dcc2a45393c228d945") format("woff"),
@@ -17,8 +17,15 @@ i[class^="icon-"]:before, i[class*=" icon-"]:before {
 }
 
 .fluent-icon{
-  font-family: 'FluentSystemIcons-Regular', sans-serif;
+  font-family: 'FluentSystemIcons-Regular' !important;
   font-size: 20px;
+  font-style: normal;
+  font-weight: normal !important;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .icon-ic_fluent_access_time_24_regular:before {

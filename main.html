@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
   <head>
     <meta charset="UTF-8" />
@@ -24,13 +24,13 @@
     <script type="module" src="main.js"></script>
   </head>
   <body id="rootLayout">
-    <fluent-design-system-provider id="fluent-design-provider">
+    <fluent-design-system-provider id="fluent-design-provider" accent-base-color="#066DBD">
       <header id="nav-header" class="ms-mica">
         <img id="app-nav-logo" height="45px" width="45px" src="assets/app-logo.png" />
         <a id="nav-bar-title">Editor</a>
         <fluent-button id="get-app-command" appearance="accent">Get Power Editor</fluent-button>
         <span id="search-box-ui">
-          <fluent-text-field id="search-box-input" appearance="outline" placeholder="Search here"></fluent-text-field>
+          <fluent-text-field id="search-box-input" appearance="outline" placeholder="Search here" style="width: 100%;"></fluent-text-field>
           <i id="search-icon" class="icon icon-ic_fluent_search_20_regular"></i>
         </span>
         <div id="nav-menu">
@@ -47,10 +47,10 @@
                 <a style="position: relative; bottom: 6px; left: 6px; display: inline-block;">What's new?</a>
               </div>
             </fluent-tab>
-            <fluent-tab id="downloads" class="nav-menu-item">
+            <fluent-tab id="docs" class="nav-menu-item">
               <div class="table" style="position: relative; right: 6px;">
-                <i class="icon icon-ic_fluent_arrow_download_20_regular" style="font-size: 20px;display:inline-block;"></i>
-                <a style="position: relative; bottom: 6px; left: 6px; display: inline-block;">Downloads</a>
+                <i class="icon icon-ic_fluent_book_number_20_regular" style="font-size: 20px;display:inline-block;"></i>
+                <a style="position: relative; bottom: 6px; left: 6px; display: inline-block;">Docs</a>
               </div>
             </fluent-tab>
             <fluent-tab id="feedback" class="nav-menu-item">
@@ -65,10 +65,34 @@
             <fluent-tab-panel id="feedbackPanel"></fluent-tab-panel>
           </fluent-tabs>
         </div>
+        <fluent-button id="compact-menu-button">
+           <i class="icon icon-ic_fluent_navigation_16_regular" style="font-size: 20px; position: relative; top: 2px;"></i>
+        </fluent-button>
+        <fluent-tooltip anchor="compact-menu-button">
+          Menu
+        </fluent-tooltip>
+        <button id="compact-home-button">
+           <i class="icon icon-ic_fluent_home_20_regular" style="font-size: 20px; position: relative; top: 2px;"></i>
+        </button>
+        <fluent-tooltip anchor="compact-home-button">
+          Home
+        </fluent-tooltip>
+        <fluent-button id="ms-store-button" appearance="accent" accent-base-color="#0A72CE">
+           <i class="icon icon-ic_fluent_store_microsoft_20_regular" style="font-size: 20px; position: relative; top: 2px; color: rgb(20, 20, 20);"></i>
+        </fluent-button>
+        <fluent-tooltip anchor="ms-store-button">
+          Get app
+        </fluent-tooltip>
+        <button id="compact-review-button">
+           <i class="icon icon-ic_fluent_person_feedback_20_regular" style="font-size: 20px; position: relative; top: 2px;"></i>
+        </button>
+        <fluent-tooltip anchor="compact-review-button">
+          Send review
+        </fluent-tooltip>
       </header>
       <div id="contentLayout">
         <fluent-progress-ring id="progress-ui"></fluent-progress-ring>
-        <iframe id="rootFrame" src="pages/home.html" />
+        <iframe id="rootFrame" onload="var pageHeight = parseInt(rootLayout.clientHeight); var pageWidth = parseInt(rootLayout.clientWidth); document.getElementById('rootFrame').width = pageWidth; document.getElementById('rootFrame').height = pageHeight;" />
       </div>
     </fluent-design-system-provider>
   </body>
