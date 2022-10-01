@@ -1,4 +1,4 @@
-import {
+﻿import {
   StandardLuminance,
   baseLayerLuminance,
   fillColor,
@@ -12,15 +12,6 @@ import{
   ThemeHelper,
   RequestedTheme
 } from "../helpers/ThemeHelper.js";
-
-import Typed from "https://cdn.jsdelivr.net/npm/typed.js@2.0.12";
-
-var options = {
-  strings: ['Create(); Edit(); Build(); more faster and comfortable.'],
-  typeSpeed: 30
-};
-
-var typed = new Typed('.title-text', options);
 
 provideFluentDesignSystem().register(allComponents);
 
