@@ -1,12 +1,17 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Power Editor - privacy policy</title>
     
+    <!-- WinUI -->
+    <script type="module" src="https://unpkg.com/@fluentui/web-components"></script>
+    <link rel="stylesheet" href="../fonts/FluentSystemIcons-Regular.css" />
+
     <!-- Local -->
     <link rel="stylesheet" href="../css/style.css" />
+    <script type="module" src="privacy.js"></script>
   </head>
   <body id="rootLayout">
     <section class="document-section">
@@ -14,22 +19,59 @@
         <div class="content-header" style="display: table; text-align: center; width: 100%;">
           <img height="80px" width="80px" src="https://img.icons8.com/fluency/96/000000/application-shield.png" />
         </div>
-        <h1>Power Editor - privacy policy</h1>
-        <p>
-          Confidentiality policy document on the use of confidential data by the
-          application. This document describes what data is used by the 
-          application and for what purposes. 
-        </p>
-        <h2>User information</h2>
-        <p>
-          Power Editor does not collect 
-          user information.  App can use your device's local account or Microsoft account to sync and store your settings and preferences. 
-        </p>
-        <h2>Storage usage</h2>
-        <p>
-          Power Editor requires full access to the file system for normal work, as the application can edit folders and files outside of the application's internal files. If the user does not grant permission to the file system, the application will not be able to edit the files as expected. By default, the application has access to the system libraries (Music, Pictures, Documents, Videos, Removable Devices). If you use Xbox, please save and work with files in these libraries because there is no support for file system permission on Xbox. 
-        </p>
-        <h2></h2>
+        <div id="content-text" style="max-width: 720px;">
+          <h1>Power Editor - privacy policy</h1>
+          <p>
+            Confidentiality policy document on the use of confidential data by the
+            application. This document describes what data is used by the 
+            application and for what purposes. 
+          </p>
+          <h2>User information</h2>
+          <p>
+            Power Editor does not collect 
+            user information.  App can use your device's local account or Microsoft account to sync and store your settings and preferences. 
+          </p>
+          <h2>Storage usage</h2>
+          <p>
+            Power Editor requires full access to the file system for normal work, as the application can edit folders and files outside of the application's internal files. If the user does not grant permission to the file system, the application will not be able to edit the files as expected. By default, the application has access to the system libraries (Music, Pictures, Documents, Videos, Removable Devices). If you use Xbox, please save and work with files in these libraries because there is no support for file system permission on Xbox. 
+          </p>
+          <h2>Microphone</h2>
+          <p>
+            Power Editor can use the microphone to recognize speech, voice commands, and web search(Bing, Google, DuckDuckGo, Yahoo, Wolfram, Wikipedia).
+          </p>
+          <h2>Package query</h2>
+          <p>
+            Power Editor can collect data about installed packages to run extensions.
+          </p>
+          <h2>Access to user marginal notes</h2>
+          <p>
+            The application can create, manage, edit user notes and store them in a Microsoft account. The application does not transfer notes and all information related to them to third parties (it is available only for you).
+          </p>
+          <h1>Document changes</h1>
+          <p>
+            The document may change from time to time because the application may request more data depending on updates and new features.
+          </p>
+          <b style="color: gray;">Document approved in 09/26/2022.</b>
+        </div>
+      </div>
+    </section>
+    <section class="footer-ui">
+      <div id="footer-ui-content" class="table" style="position: relative; top: 50%; transform: translate(0, -68%);">
+        <fluent-anchor style="display: inline-block; margin: 4px;">
+          <span style="margin: 10px; display: block;">Contact</span>
+        </fluent-anchor>
+        <fluent-anchor style="display: inline-block; margin: 4px;">
+          <span style="padding: 10px; display: block;">Provide feedback</span>
+        </fluent-anchor>
+        <fluent-anchor style="display: inline-block; margin: 4px;">
+          <span style="padding: 10px; display: block;">Microsoft Store</span>
+        </fluent-anchor>
+        <fluent-anchor style="display: inline-block; margin: 4px;">
+          <span style="padding: 10px; display: block;">Privacy policy</span>
+        </fluent-anchor>
+        <fluent-anchor style="display: inline-block; margin: 4px;">
+          <span style="padding: 10px; display: block;">Twitter</span>
+        </fluent-anchor>
       </div>
     </section>
   </body>
