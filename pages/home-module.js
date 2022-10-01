@@ -13,10 +13,36 @@ import{
   RequestedTheme
 } from "../helpers/ThemeHelper.js";
 
+import{
+  DeviceHelper,
+  KnownDeviceOS
+} from "../helpers/DeviceHelper.js";
+
 provideFluentDesignSystem().register(allComponents);
+
+//UI controls
+var GetAppButton = document.getElementById("get-app-button");
 
 window.onload = function(){
   ThemeInitialize();
+  Page_OnLoaded();
+}
+
+function InstallOrGetApp(){
+  try{
+    var deviceHelper = new DeviceHelper(true);
+    var currentOS = deviceHelper.GetCurrentDeviceOSInfo();
+    
+    if(currentOS.toString() == KnownDeviceOS.Windows){
+      window.open("ms-windows-store://pdp/?productid=9NCXLRSKPL9K");
+    }
+    else{
+      window.open("https://apps.microsoft.com/store/detail/power-editor-powerful-text-editor-for-windows/9NCXLRSKPL9K");
+    }
+  }
+  catch(e){
+    console.log(e.toString());
+  }
 }
 
 function ThemeInitialize(){
@@ -39,4 +65,15 @@ function ThemeInitialize(){
   catch(e){
     console.log(e.toString());
   }
+}
+
+function Page_OnLoaded(){
+    try{
+        if(GetAppButton != null){
+            GetAppButton.addEventListener("click", InstallOrGetApp);
+        }
+    }
+    catch(e){
+        console.log(e.toString());
+    }
 }
