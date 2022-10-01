@@ -1,4 +1,4 @@
-﻿@media (prefers-color-scheme: light) {
+@media (prefers-color-scheme: light) {
   body {
     background-color: rgb(224, 224, 224);
     color: rgb(20, 20, 20);
@@ -180,7 +180,7 @@ iframe{
 }
 
 #getting-started-div{
-  max-width: 600px;
+  max-width: 680px;
   position: relative;
   text-align: center;
   display: inline-block;
@@ -198,6 +198,11 @@ iframe{
   text-align: center;
   height: 108px;
   width: 108px;
+  animation-name: app-icon;
+  animation-duration: 1s;
+  animation-direction: normal;
+  animation-iteration-count: 1;
+  animation-play-state: running;
 }
 
 .app-icon-picture{
@@ -268,6 +273,39 @@ iframe{
   animation-play-state: running;
 }
 
+#getting-started-commands{
+  width: 100%;
+  display: table;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.typing-text {
+  width: 22ch;
+  animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-family: monospace;
+  font-size: 2em;
+  height: auto;
+  max-height: 150px;
+  display: inline-block;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent
+  }
+}
+
 @keyframes page-transition{
   0%{
     opacity: 0;
@@ -279,3 +317,48 @@ iframe{
     margin-top: 0px;
   }
 }
+
+@keyframes app-icons{
+  0%{
+    opacity: 0;
+    margin: -100px;
+  }
+  
+  100%{
+    opacity: 1;
+    margin: 0px;
+  }
+}
+
+.ml11 {
+  font-weight: 700;
+  font-size: 3.5em;
+}
+
+.ml11 .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.1em;
+  padding-right: 0.05em;
+  padding-bottom: 0.15em;
+}
+
+.ml11 .line {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 3px;
+  background-color: #fff;
+  transform-origin: 0 50%;
+}
+
+.ml11 .line1 { 
+  top: 0; 
+  left: 0;
+}
+
+.ml11 .letter {
+  display: inline-block;
+  line-height: 1em;
+} 

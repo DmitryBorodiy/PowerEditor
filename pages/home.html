@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 
   <head>
@@ -18,27 +18,64 @@
     
     <!-- Local -->
     <link rel="stylesheet" href="../css/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script type="module" src="home.js"></script>
+    <script type="module" src="home-module.js"></script>
   </head>
   
   <body id="rootLayout">
     <section id="getting-started">
       <div id="getting-started-div" class="ui-page-transition">
         <div class="table" style="width: 100%;">
-          <!-- <div class="app-icon" style="height: 86px; width: 86px; position: relative; top: -3px;"> -->
-<!--        <img class="app-icon-picture" src="" style="height: 55px; width: 55px; left: 50%; transform: translate(-77%, -50%);" /> -->
-<!--      </div> -->
+          <div class="app-icon" style="height: 65px; width: 65px; position: relative; top: -3px; transform: rotate(-13deg)">
+            <img class="app-icon-picture" src="../assets/icons8-notepad-96.png" style="height: 38px; width: 38px; left: 50%; transform: translate(-86%, -50%);" />
+          </div>
           <div class="app-icon" style="margin-left: 24px; margin-right: 24px;">
             <img class="app-icon-picture" src="../assets/app-logo.png" />
           </div>
-          <!-- <div class="app-icon" style="height: 86px; width: 86px; position: relative; top: -3px;"> -->
-<!--        <img class="app-icon-picture" src="" style="height: 55px; width: 55px; left: 50%; transform: translate(-77%, -50%);" /> -->
-<!--      </div> -->
+          <div class="app-icon" style="height: 65px; width: 65px; position: relative; top: -3px; transform: rotate(13deg)">
+            <img class="app-icon-picture" src="https://img.icons8.com/fluency/96/000000/console.png" style="height: 38px; width: 38px; left: 50%; transform: translate(-86%, -50%);" />
+          </div>
         </div>
-        <h1 id="getting-started-title" style="font-size: 40px;">Create, edit, build, create more faster and comfortable.</h1>
+        <h1 id="getting-started-title" class="typing-text" style="font-size: 40px;">Create(); Edit(); Build(); more faster and comfortable.</h1>
         <p id="getting-started-description" style="position: relative; font-size: 20px;">
           Power Editor is created for more comfortable code and text writing exlusively for Windows devices. Powerful code environment provide more productivity and new features based on UWP and WinUI user experience. Build the future with next Gen editor for Windows.
         </p>
+        <div id="getting-started-commands">
+          <div style="display: inline-block;">
+            <fluent-button id="get-app-button" style="display: table; margin: 3px;">
+              <div style="padding: 8px; padding-left: 10px; padding-right: 10px;">
+              <img height="26px" width="26px" style="display: inline-block; position: relative; top: -4px; left: -3px;" src="../assets/store-logo.png" />
+              <span style="display: inline-block; text-align: left; position: relative; left: 5px;">
+                <a><b>Get from Microsoft Store</b></a><br />
+                <a>From 1.99$</a>
+              </span>
+              </div>
+            </fluent-button>
+          </div>
+          <div style="display: inline-block;">
+            <fluent-button id="get-trial-button" style="display: table; margin: 3px;">
+              <div style="padding: 8px; padding-left: 10px; padding-right: 10px;">
+                <img height="26px" width="26px" style="display: inline-block; position: relative; top: -4px; left: -3px;" src="https://img.icons8.com/fluency/96/000000/face-generator.png" />
+                <span style="display: inline-block; text-align: left; position: relative; left: 5px;">
+                  <a><b>Get free version</b></a><br />
+                  <a>Get for free</a>
+                </span>
+              </div>
+            </fluent-button>
+          </div>
+          <div style="display: inline-block;">
+            <fluent-button id="get-trial-button" style="display: table; margin: 3px; margin-top: 0px;">
+              <div style="padding: 8px; padding-left: 10px; padding-right: 10px;">
+                <img height="26px" width="26px" style="display: inline-block; position: relative; top: -4px; left: -3px;" src="https://img.icons8.com/fluency/96/000000/feedback-hub.png" />
+                <span style="display: inline-block; text-align: left; position: relative; left: 5px;">
+                  <a><b>Share your feedback</b></a><br />
+                  <a>Describe your using experience</a>
+                </span>
+              </div>
+            </fluent-button>
+          </div>
+        </div>
       </div>
     </section>
   </body>
