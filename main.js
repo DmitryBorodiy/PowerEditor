@@ -125,6 +125,9 @@ function Page_OnLoaded(){
     TopMenuUI.children[0].onclick = function(){
       SetFramePage("pages/home.html", 1000);
     };
+    TopMenuUI.children[2].onclick = function(){
+      SetFramePage("docs/docs.html", 1000);
+    };
     
     var pageWidth = parseInt(rootLayout.clientWidth);
     
