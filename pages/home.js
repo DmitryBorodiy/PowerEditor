@@ -1,8 +1,12 @@
-﻿//UI elements
+//UI elements
+var Body = document.body;
 var GettingStartedDiv;
 
 window.onload = function(){
-    Page_OnLoaded();
+  Page_OnLoaded();
+  Body.onresize = function(){
+    Page_OnResize();
+  };
 };
 
 function AnimateTextTyping(text) {
@@ -44,4 +48,40 @@ function Page_OnLoaded(){
     catch(e){
         console.log(e.toString);
     }
+}
+
+function Page_OnResize(){
+  try{
+    var pageWidth = parseInt(rootLayout.clientWidth);
+    
+    if(pageWidth != null){
+      if(pageWidth <= 1050){
+        SetMobileView();
+      }
+      else if(pageWidth > 1050){
+        SetDefaultView();
+      }
+    } 
+  }
+  catch(e){
+    console.log(e.toString());
+  }
+}
+
+function SetMobileView(){
+  try{
+    document.getElementsByTagName("h1")[0].style.fontFamily = "28px";
+  }
+  catch(e){
+    console.log(e.toString());
+  }
+}
+
+function SetDefaultView(){
+  try{
+    document.getElementsByTagName("h1")[0].style.fontFamily = "40px";
+  }
+  catch(e){
+    console.log(e.toString());
+  }
 }

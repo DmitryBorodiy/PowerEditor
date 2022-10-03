@@ -18,6 +18,10 @@ import{
   KnownDeviceOS
 } from "./helpers/DeviceHelper.js";
 
+import{
+  FeedbackHelper
+} from "./helpers/FeedbackHelper.js";
+
 provideFluentDesignSystem().register(allComponents);
 
 //UI Controls
@@ -40,6 +44,7 @@ var CompactReviewButton;
 
 //Mobile UI controls
 var MobileMenuButtonUI;
+var NavigationViewUI;
 
 window.onload = function(){
   Page_OnLoaded();
@@ -108,6 +113,7 @@ function Page_OnLoaded(){
     MSStoreCompactButton = document.getElementById("ms-store-button");
     CompactHomeButton = document.getElementById("compact-home-button");
     CompactReviewButton = document.getElementById("compact-review-button");
+    NavigationViewUI = document.getElementById("navigation-view");
     
     SearchBoxInput.addEventListener("keydown", SearchBox_KeyDown);
     SearchBoxIcon.onclick = function(){
@@ -117,7 +123,13 @@ function Page_OnLoaded(){
     MSStoreCompactButton.addEventListener("click", InstallOrGetApp);    
     GetAppCommandUI.addEventListener("click", InstallOrGetApp);
     CompactHomeButton.onclick = function(){
-        SetFramePage("pages/home.html");
+      SetFramePage("pages/home.html");
+    };
+    CompactReviewButton.onclick = function(){
+      SetFramePage("pages/feedback.html");
+    };
+    CompactMenuButton.onclick = function(){
+      CompactMenuButton_OnClick();
     };
     
     searcBoxUI = document.getElementById("search-box-ui");
@@ -127,6 +139,9 @@ function Page_OnLoaded(){
     };
     TopMenuUI.children[2].onclick = function(){
       SetFramePage("docs/docs.html", 1000);
+    };
+    TopMenuUI.children[3].onclick = function(){
+      SetFramePage("pages/feedback.html");
     };
     
     var pageWidth = parseInt(rootLayout.clientWidth);
@@ -138,6 +153,39 @@ function Page_OnLoaded(){
       else if (pageWidth > 1050) {
         SetDefaultView();
       }
+    }
+  }
+  catch(e){
+    console.log(e.toString());
+  }
+}
+
+var IsNavigationViewOpened = false;
+function CompactMenuButton_OnClick(){
+  try{
+    if(IsNavigationViewOpened == false){
+      IsShowNavigationView(true);
+      IsNavigationViewOpened = true;
+    }
+    else{
+      IsShowNavigationView(false);
+      IsNavigationViewOpened = false;
+    }
+  }
+  catch(e){
+    console.log(e.toString());
+  }
+}
+
+function IsShowNavigationView(isShow){
+  try{
+    if(isShow == true){
+      NavigationViewUI.style.visibility = "visible";
+      
+      console.log("Navigation opened.");
+    }
+    else{
+      NavigationViewUI.style.visibility = "collapse";
     }
   }
   catch(e){
@@ -237,6 +285,7 @@ function SetMobileView(){
     CompactReviewButton.style.visibility = "visible";
     
     searcBoxUI.style.visibility = "collapse";
+
   }
   catch(e){
     console.log(e.toString());
@@ -276,6 +325,23 @@ function InstallOrGetApp(){
     }
     else{
       window.open("https://apps.microsoft.com/store/detail/power-editor-powerful-text-editor-for-windows/9NCXLRSKPL9K");
+    }
+  }
+  catch(e){
+    console.log(e.toString());
+  }
+}
+
+function SendReview(){
+  try{
+    var deviceHelper = new DeviceHelper(true);
+    var currentOS = deviceHelper.GetCurrentDeviceOSInfo();
+    
+    if(currentOS.toString() == KnownDeviceOS.Windows) {
+      
+    }
+    else{
+      
     }
   }
   catch(e){
