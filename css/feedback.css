@@ -11,3 +11,31 @@
     background-size: cover;
     background-image: url('../assets/Connect-backgroud.jpg');
 }
+
+h1{
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 40px;
+}
+
+h2{
+  font-family: 'Segoe UI', sans-serif;
+}
+
+h3{
+  font-family: 'Segoe UI', sans-serif;
+}
+
+a{
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 18px;
+}
+
+p{
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 18px;
+}
+
+b{
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 18px;
+}

@@ -94,6 +94,27 @@ body {
 h1{
   font-family: 'Segoe UI', sans-serif;
   font-weight: bold;
+  font-size: 40px;
+}
+
+h2{
+  font-family: 'Segoe UI', sans-serif;
+}
+
+h3{
+  font-family: 'Segoe UI', sans-serif;
+}
+
+a{
+  font-family: 'Segoe UI', sans-serif;
+}
+
+p{
+  font-family: 'Segoe UI', sans-serif;
+}
+
+b{
+  font-family: 'Segoe UI', sans-serif;
 }
 
 header{

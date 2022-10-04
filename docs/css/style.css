@@ -129,4 +129,8 @@ b{
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+  display: table;
+  align-content: center;
+  align-items: center;
+  text-align: left;
 }

@@ -143,13 +143,13 @@ function Page_OnLoaded(){
     searcBoxUI = document.getElementById("search-box-ui");
     
     TopMenuUI.children[0].onclick = function(){
-      SetFramePage("pages/home.html", 1000);
+      SetFramePage("pages/home.html", 800);
     };
     TopMenuUI.children[2].onclick = function(){
-      SetFramePage("docs/docs.html", 1000);
+      SetFramePage("docs/docs.html", 800);
     };
     TopMenuUI.children[3].onclick = function(){
-      SetFramePage("pages/feedback.html");
+      SetFramePage("pages/feedback.html", 800);
     };
     
     var pageWidth = parseInt(rootLayout.clientWidth);
