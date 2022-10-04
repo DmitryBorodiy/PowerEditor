@@ -45,6 +45,9 @@ var CompactReviewButton;
 //Mobile UI controls
 var MobileMenuButtonUI;
 var NavigationViewUI;
+var NavigationViewSearchInput;
+var NavigationViewSearchAction;
+var NavigationViewItems;
 
 window.onload = function(){
   Page_OnLoaded();
@@ -114,6 +117,14 @@ function Page_OnLoaded(){
     CompactHomeButton = document.getElementById("compact-home-button");
     CompactReviewButton = document.getElementById("compact-review-button");
     NavigationViewUI = document.getElementById("navigation-view");
+    NavigationViewItems = document.getElementById("navigation-view-items");
+    NavigationViewSearchInput = document.getElementById("navigation-view-search-input");
+    NavigationViewSearchAction = document.getElementById("navigation-view-search-box-action");
+    NavigationViewSearchAction.onclick = function(){
+      SearchWeb(NavigationViewSearchInput.value.toString());
+    };
+
+    NavigationViewSearchInput.addEventListener("keydown", NavigationViewSearchInput_KeyDown);
     
     SearchBoxInput.addEventListener("keydown", SearchBox_KeyDown);
     SearchBoxIcon.onclick = function(){
@@ -145,11 +156,35 @@ function Page_OnLoaded(){
     TopMenuUI.children[0].onclick = function(){
       SetFramePage("pages/home.html", 800);
     };
+    TopMenuUI.children[1].onclick = function(){
+      SetFramePage("blog/blog.html", 800);
+    };
     TopMenuUI.children[2].onclick = function(){
       SetFramePage("docs/docs.html", 800);
     };
     TopMenuUI.children[3].onclick = function(){
       SetFramePage("pages/feedback.html", 800);
+    };
+
+    NavigationViewItems.children[0].onclick = function(){
+      SetFramePage("pages/home.html", 800);
+      IsShowNavigationView(false);
+    };
+    NavigationViewItems.children[1].onclick = function(){
+      SetFramePage("blog/blog.html", 800);
+      IsShowNavigationView(false);
+    };
+    NavigationViewItems.children[2].onclick = function(){
+      SetFramePage("docs/docs.html", 800);
+      IsShowNavigationView(false);
+    };
+    NavigationViewItems.children[3].onclick = function(){
+      SetFramePage("pages/feedback.html", 800);
+      IsShowNavigationView(false);
+    };
+    NavigationViewItems.children[4].onclick = function(){
+      SetFramePage("downloads/downloads.html", 800);
+      IsShowNavigationView(false);
     };
     
     var pageWidth = parseInt(rootLayout.clientWidth);
@@ -405,6 +440,25 @@ function SearchBox_KeyDown(args){
         
         console.log(SearchBoxInput.value);
         SearchWeb(SearchBoxInput.value.toString());
+      }
+    }
+  }
+  catch(e){
+    console.log(e.toString());
+  }
+}
+
+function NavigationViewSearchInput_KeyDown(args){
+  try{
+    if(args.key == "Enter"){
+      if(NavigationViewSearchInput != null){
+        ShowProgressUI(true, 2750);
+        
+        console.log(NavigationViewSearchInput.value);
+        SearchWeb(NavigationViewSearchInput.value.toString());
+
+        IsShowNavigationView(false);
+        NavigationViewSearchInput.value = "";
       }
     }
   }

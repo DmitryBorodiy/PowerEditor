@@ -96,14 +96,59 @@
       <div id="navigation-view-box">
         <span id="navigation-view-rect"></span>
         <div id="navigation-view">
+          <!-- Navigation view title region -->
           <button id="collapse-navigation-view" class="ui-command" style="height: 35px; width: 35px;">
             <i class="icon icon-ic_fluent_arrow_left_20_regular" style="font-size: 18px; display: inline-block; position: relative; top: 2px;"></i>
           </button>
-          <a id="navigation-view-title"><b>Navigation menu</b></a>
+          <a id="navigation-view-title"><b>Power Editor</b></a>
           <div id="navigation-view-search-box">
             <fluent-text-field id="navigation-view-search-input" appearance="outline" placeholder="Search in Bing"></fluent-text-field>
-            <i class="icon icon-ic_fluent_search_20_regular" style="font-size: 16px; float: right; right: 8px; top: -28px; position: relative;"></i>
+            <i id="navigation-view-search-box-action" class="icon icon-ic_fluent_search_20_regular" style="font-size: 16px; float: right; right: 8px; top: -28px; position: relative;"></i>
           </div>
+          <!-- Navigation view title endregion -->
+          <!-- Navigation view menu region -->
+          <a style="font-size: 12px;margin-left: 5px;padding-top: 10px;display: block;">Menu</a>
+          <fluent-listbox id="navigation-view-items" style="border: none;background-color: transparent;padding-top: 12px;position: relative;left: -11px;">
+            <fluent-option selected value="pages/home.html" style="border: none; background-color: transparent; height: 40px;">
+              <span style="display: table; width: 100%; padding-left: 4px;">
+                <i class="icon icon-ic_fluent_home_20_regular" style="display: inline-block;font-size: 20px;position: relative;top: 2px;"></i>
+                <a style="display: inline-block;position: relative;top: -3px;padding-left: 10px;">Home</a>
+              </span>
+            </fluent-option>
+            <fluent-option value="blog/blog.html" style="border: none; background-color: transparent; height: 40px;">
+              <span style="display: table; width: 100%; padding-left: 4px;">
+                <i class="icon icon-ic_fluent_news_20_regular" style="display: inline-block;font-size: 20px;position: relative;top: 2px;"></i>
+                <a style="display: inline-block;position: relative;top: -3px;padding-left: 10px;">Blog</a>
+              </span>
+            </fluent-option>
+            <fluent-option value="docs/docs.html" style="border: none; background-color: transparent; height: 40px;">
+              <span style="display: table; width: 100%; padding-left: 4px;">
+                <i class="icon icon-ic_fluent_book_number_20_regular" style="display: inline-block;font-size: 20px;position: relative;top: 2px;"></i>
+                <a style="display: inline-block;position: relative;top: -3px;padding-left: 10px;">Docs</a>
+              </span>
+            </fluent-option>
+            <fluent-option value="pages/feedback.html" style="border: none; background-color: transparent; height: 40px;">
+              <span style="display: table; width: 100%; padding-left: 4px;">
+                <i class="icon icon-ic_fluent_person_feedback_20_regular" style="display: inline-block;font-size: 20px;position: relative;top: 2px;"></i>
+                <a style="display: inline-block;position: relative;top: -3px;padding-left: 10px;">Send feedback</a>
+              </span>
+            </fluent-option>
+            <fluent-option value="downloads/downloads.html" style="border: none; background-color: transparent; height: 40px;">
+              <span style="display: table; width: 100%; padding-left: 4px;">
+                <i class="icon icon-ic_fluent_arrow_download_20_regular" style="display: inline-block;font-size: 20px;position: relative;top: 2px;"></i>
+                <a style="display: inline-block;position: relative;top: -3px;padding-left: 10px;">Downloads</a>
+              </span>
+            </fluent-option>
+          </fluent-listbox>
+          <fluent-listbox id="navigation-view-footer" style="border: none; background-color: transparent; position: fixed; bottom: 26px; left: 0px;">
+            <fluent-option style="border: none; background-color: transparent; height: 40px;" onclick="window.open('mailto:dima.borodiy@outlook.com');">
+              <span style="display: table; width: 100%; padding-left: 4px;">
+                <i class="icon icon-ic_fluent_contact_card_20_regular" style="display: inline-block;font-size: 20px;position: relative;top: 2px;"></i>
+                <a style="display: inline-block;position: relative;top: -3px;padding-left: 10px;">Contact developer</a>
+              </span>
+            </fluent-option>
+          </fluent-listbox>
+          <!-- Navigation view menu endregion -->
         </div>
       </div>
     </fluent-design-system-provider>

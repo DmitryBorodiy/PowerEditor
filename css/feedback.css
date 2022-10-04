@@ -12,6 +12,14 @@
     background-image: url('../assets/Connect-backgroud.jpg');
 }
 
+#start-pane-content{
+  animation-name: page-transition;
+  animation-direction: normal;
+  animation-delay: 1s;
+  animation-iteration-count: 1;
+  animation-play-state: running;
+}
+
 h1{
   font-family: 'Segoe UI', sans-serif;
   font-size: 40px;
@@ -38,4 +46,16 @@ p{
 b{
   font-family: 'Segoe UI', sans-serif;
   font-size: 18px;
+}
+
+@keyframes page-transition{
+  0%{
+    opacity: 0;
+    top: -75px;
+  }
+
+  100%{
+    opacity: 1;
+    top: 0px;
+  }
 }
