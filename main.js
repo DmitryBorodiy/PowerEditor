@@ -1,4 +1,4 @@
-import {
+﻿import {
   StandardLuminance,
   baseLayerLuminance,
   fillColor,
@@ -93,7 +93,7 @@ function Page_OnLoaded(){
       RootFrame.width = pageWidth;
       RootFrame.height = pageHeight;
 
-      ShowProgressUI(true, 800);
+      //ShowProgressUI(true, 800);
       RootFrame.src = "pages/home.html";
     }
     
@@ -131,6 +131,14 @@ function Page_OnLoaded(){
     CompactMenuButton.onclick = function(){
       CompactMenuButton_OnClick();
     };
+
+    document.getElementById("navigation-view-rect").onclick = function(){
+      NavigationViewRect_OnClick();
+    };
+
+    document.getElementById("collapse-navigation-view").onclick = function(){
+      IsShowNavigationView(false);
+    };
     
     searcBoxUI = document.getElementById("search-box-ui");
     
@@ -160,6 +168,15 @@ function Page_OnLoaded(){
   }
 }
 
+function NavigationViewRect_OnClick(){
+  try{
+    IsShowNavigationView(false);
+  }
+  catch(e){
+    console.log(e.toString());
+  }
+}
+
 var IsNavigationViewOpened = false;
 function CompactMenuButton_OnClick(){
   try{
@@ -180,13 +197,19 @@ function CompactMenuButton_OnClick(){
 function IsShowNavigationView(isShow){
   try{
     if(isShow == true){
-      NavigationViewUI.style.visibility = "visible";
+      document.getElementById("navigation-view").style.visibility = "visible";
+      document.getElementById("navigation-view-box").style.visibility = "visible";
       
       console.log("Navigation opened.");
     }
     else{
-      NavigationViewUI.style.visibility = "collapse";
+      document.getElementById("navigation-view").style.visibility = "collapse";
+      document.getElementById("navigation-view-box").style.visibility = "collapse";
+
+      console.log("Navigation closed.");
     }
+
+    IsNavigationViewOpened = isShow;
   }
   catch(e){
     console.log(e.toString());

@@ -1,0 +1,13 @@
+﻿body{
+    padding: 0px;
+    margin: 0px;
+}
+
+#start-pane{
+    height: 520px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-image: url('../assets/Connect-backgroud.jpg');
+}

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
   <head>
     <meta charset="UTF-8" />
@@ -70,7 +70,7 @@
         <fluent-tooltip anchor="compact-menu-button">
           Menu
         </fluent-tooltip>
-        <button id="compact-home-button">
+        <button id="compact-home-button" class="ui-command">
            <i class="icon icon-ic_fluent_home_20_regular" style="font-size: 20px; position: relative; top: 2px;"></i>
         </button>
         <fluent-tooltip anchor="compact-home-button">
@@ -82,7 +82,7 @@
         <fluent-tooltip anchor="ms-store-button">
           Get app
         </fluent-tooltip>
-        <button id="compact-review-button">
+        <button id="compact-review-button" class="ui-command">
            <i class="icon icon-ic_fluent_person_feedback_20_regular" style="font-size: 20px; position: relative; top: 2px;"></i>
         </button>
         <fluent-tooltip anchor="compact-review-button">
@@ -91,10 +91,20 @@
       </header>
       <div id="contentLayout">
         <fluent-progress-ring id="progress-ui"></fluent-progress-ring>
-        <iframe id="rootFrame" onload="var pageHeight = parseInt(rootLayout.clientHeight); var pageWidth = parseInt(rootLayout.clientWidth); document.getElementById('rootFrame').width = pageWidth; document.getElementById('rootFrame').height = pageHeight;" />
+        <iframe id="rootFrame" onload="var pageHeight = parseInt(rootLayout.clientHeight); var pageWidth = parseInt(rootLayout.clientWidth); document.getElementById('rootFrame').width = pageWidth; document.getElementById('rootFrame').height = pageHeight;"></iframe>
       </div>
-      <div id="navigation-view">
-        
+      <div id="navigation-view-box">
+        <span id="navigation-view-rect"></span>
+        <div id="navigation-view">
+          <button id="collapse-navigation-view" class="ui-command" style="height: 35px; width: 35px;">
+            <i class="icon icon-ic_fluent_arrow_left_20_regular" style="font-size: 18px; display: inline-block; position: relative; top: 2px;"></i>
+          </button>
+          <a id="navigation-view-title"><b>Navigation menu</b></a>
+          <div id="navigation-view-search-box">
+            <fluent-text-field id="navigation-view-search-input" appearance="outline" placeholder="Search in Bing"></fluent-text-field>
+            <i class="icon icon-ic_fluent_search_20_regular" style="font-size: 16px; float: right; right: 8px; top: -28px; position: relative;"></i>
+          </div>
+        </div>
       </div>
     </fluent-design-system-provider>
   </body>

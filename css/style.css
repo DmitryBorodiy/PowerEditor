@@ -1,4 +1,4 @@
-@media (prefers-color-scheme: light) {
+﻿@media (prefers-color-scheme: light) {
   body {
     background-color: rgb(224, 224, 224);
     color: rgb(20, 20, 20);
@@ -25,6 +25,11 @@
   }
 
   #compact-review-button:active{
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+  }
+
+  .ui-command:active{
     background-color: rgba(255, 255, 255, 0.2);
     border: 1px solid rgba(255, 255, 255, 0.6);
   }
@@ -67,6 +72,11 @@
     border: 1px solid rgba(120, 120, 120, 0.6);
   }
   
+  .ui-command:active{
+    background-color: rgba(80, 80, 80, 0.3);
+    border: 1px solid rgba(120, 120, 120, 0.6);
+  }
+
   #navigation-view {
     background-color: rgba(0, 0, 0, 0.8);
     -webkit-backdrop-filter: blur(50px);
@@ -291,7 +301,6 @@ iframe{
   text-align: center;
   justify-content: center;
   align-items: center;
-  padding-top: 20px;
 }
 
 .typing-text {
@@ -385,7 +394,51 @@ iframe{
   text-align: left;
   border-radius: 0px 6px 6px 6px;
   display: block;
-  padding: 20px;
+  padding: 10px;
   z-index: 1111111111111111111111;
   visibility: collapse;
+}
+
+#navigation-view-title{
+  position: relative;
+  left: 8px;
+}
+
+#navigation-view-search-input{
+  width: 100%;
+}
+
+#navigation-view-search-box{
+  padding-left: 5px;
+  padding-right: 12px;
+  margin-top: 16px;
+}
+
+#navigation-view-box{
+  width: 100%;
+  position: fixed;
+  height: 100%;
+  background-color: transparent;
+  display: block;
+  z-index: 111111111111;
+  visibility: collapse;
+}
+
+#navigation-view-rect{
+  width: 100%;
+  position: fixed;
+  height: 100%;
+  background-color: transparent;
+  display: block;
+}
+
+.ui-command{
+  vertical-align: middle;
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  justify-content: center;
+  background-color: transparent;
+  border-radius: 5px;
+  border: none;
 }

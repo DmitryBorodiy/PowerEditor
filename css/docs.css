@@ -1,0 +1,34 @@
+﻿@media (prefers-color-scheme: light){
+  body {
+    background-color: rgb(224, 224, 224);
+    color: rgb(20, 20, 20);
+  }
+
+  #start-pane{
+    background-image: url('../assets/docs.jpg');
+  }
+}
+
+@media (prefers-color-scheme: dark){
+  body {
+    background-color: rgb(35, 35, 35);
+    color: rgb(250, 250, 250);
+  }
+
+  #start-pane{
+    background-image: url('../assets/docs-dark.jpg');
+  }
+}
+
+body{
+  padding: 0px;
+  margin: 0px;
+}
+
+#start-pane{
+  height: 520px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}

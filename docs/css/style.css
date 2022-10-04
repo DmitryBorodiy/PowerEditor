@@ -1,4 +1,4 @@
-@media (prefers-color-scheme: light){
+﻿@media (prefers-color-scheme: light){
   body{
     background-color: rgb(224, 224, 224);
     color: rgb(20, 20, 20);
@@ -22,6 +22,10 @@
   .footer-ui{
     background-color: rgb(246, 246, 246);
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+  }
+
+  #start-pane{
+    background-image: url('/assets/docs.jpg');
   }
 }
 
@@ -49,6 +53,10 @@
   .footer-ui{
     background-color: rgb(52, 52, 52);
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+  }
+
+  #start-pane{
+    background-image: url('/assets/docs-dark.jpg');
   }
 }
 
@@ -113,4 +121,12 @@ b{
 .table-item{
   display: inline-block;
   margin: 5px;
+}
+
+#start-pane{
+  height: 520px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
 }
