@@ -1,4 +1,4 @@
-﻿import {
+import {
   StandardLuminance,
   baseLayerLuminance,
   fillColor,
@@ -6,14 +6,34 @@
   provideFluentDesignSystem
 } from "https://unpkg.com/@fluentui/web-components@2.0.0";
 
+import {
+  FeedbackHelper
+} from "/helpers/FeedbackHelper.js";
+
+import {
+  WebAppInstanceHelper
+} from "/helpers/WebAppInstanceHelper.js";
+
 provideFluentDesignSystem().register(allComponents);
 
 //UI elements
+var FooterContactAction;
+var FeedbackFooterAction;
 var rootLayout = document.getElementById("rootLayout");
 
 window.loaded = function(){
   Page_OnLoaded();
 };
+
+function ContactDeveloper_UICommand(args){
+  try {
+    var feedback = new FeedbackHelper();
+    feedback.ContactDeveloper();
+  }
+  catch(e){
+    console.log(e.toString());
+  }
+}
 
 function ThemeInitialize(){
   try{
@@ -35,8 +55,26 @@ function ThemeInitialize(){
 function Page_OnLoaded(){
   try{
     ThemeInitialize();
+    
+    FooterContactAction = document.getElementById("footer-contact-action");
+    FeedbackFooterAction = document.getElementById("feedback-footer-action");
+    
+    FooterContactAction.addEventListener("click", ContactDeveloper_UICommand);
+    FeedbackFooterAction.addEventListener("click", SendFeedback_UICommand);
   }
   catch(e){
+    console.log(e.toString());
+  }
+}
+
+function SendFeedback_UICommand(args){
+  try {
+    var instanceHelper = new WebAppInstanceHelper(true);
+    instanceHelper.SetInstanceEntryPoint("/pages/feedback.html");
+    
+    document.location.href = "/main.html";
+  }
+  catch(e) {
     console.log(e.toString());
   }
 }

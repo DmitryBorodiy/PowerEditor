@@ -1,4 +1,4 @@
-﻿import {
+import {
   StandardLuminance,
   baseLayerLuminance,
   fillColor,
@@ -21,6 +21,10 @@ import{
 import{
   FeedbackHelper
 } from "./helpers/FeedbackHelper.js";
+
+import {
+  WebAppInstanceHelper
+} from "./helpers/WebAppInstanceHelper.js";
 
 provideFluentDesignSystem().register(allComponents);
 
@@ -98,6 +102,15 @@ function Page_OnLoaded(){
 
       //ShowProgressUI(true, 800);
       RootFrame.src = "pages/home.html";
+      
+      var instanceHelper = new WebAppInstanceHelper(true);
+      var appInstance = instanceHelper.GetEntryPoint();
+      
+      console.log(appInstance.toString());
+      
+      if(appInstance != null) {
+        SetFramePage(appInstance.toString(), 600);
+      }
     }
     
     //Header component logic

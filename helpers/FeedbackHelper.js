@@ -35,4 +35,13 @@ export class FeedbackHelper{
       console.log(e.toString());
     }
   };
+  
+  ContactDeveloper(){
+    try{
+      window.open("mailto:dima.borodiy@outlook.com");
+    }
+    catch(e){
+      console.log(e.toString());
+    }
+  };
 }

@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="UTF-8" />
@@ -16,8 +16,9 @@
     <script type="module" src="feedback.js"></script>
   </head>
   <body id="rootLayout">
+    <fluent-design-provider id="fluent-design-provider">
     <div id="start-pane" style="height: auto;">
-      <span id="start-pane-content" style="padding-left: 45px; padding-top: 95px; padding-bottom: 80px; position: relative; display: inline-block;">
+      <span id="start-pane-content" style="padding-left: 45px; padding-top: 132px; padding-bottom: 80px; position: relative; display: inline-block; color: white;">
         <h1 id="start-pane-title">Provide feedback!</h1>
         <p style="max-width: 350px;">
           Here you can provide your user experience stuff and share
@@ -25,5 +26,25 @@
         </p>
       </span>
     </div>
+    <br />
+    <!-- Feedback form region -->
+    <section id="feedback-path">
+      <h2>Send feedback</h2>
+      <form id="feedback-form">
+        <fluent-text-field id="feedback-subject-box" appearance="outline" placeholder="Enter feedback subject" style="width: 100%; max-width: 360px;">Feedback subject</fluent-text-field>
+        <div>
+        <fluent-text-area id="description-box" rows="20" placeholder="Describe your experience" height="90px" style="margin-top: 10px; width: 100%; max-width: 360px;">Feedback content</fluent-text-area>
+        </div>
+        <br />
+        <fluent-button id="send-feedback-action" appearance="accent" style="height: 36px; width: 120px;">
+          Send feedback
+        </fluent-button>
+      </form>
+    </section>
+    <!-- Feedback form end region -->
+    <!-- Footer region -->
+    
+    <!-- Footer end region -->
+    </fluent-design-provider>
   </body>
 </html>

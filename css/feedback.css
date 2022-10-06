@@ -1,4 +1,4 @@
-﻿body{
+body{
     padding: 0px;
     margin: 0px;
 }
@@ -46,6 +46,23 @@ p{
 b{
   font-family: 'Segoe UI', sans-serif;
   font-size: 18px;
+}
+
+#feedback-path{
+  margin-left: 45px;
+  margin-right: 42px;
+}
+
+#feedback-form{
+  width: 100%;
+  position: relative;
+  top: -6px;
+}
+
+#description-box{
+  display: flex;
+  vertical-align: center;
+  align-content: stretch;
 }
 
 @keyframes page-transition{
