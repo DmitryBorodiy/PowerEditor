@@ -112,6 +112,8 @@ function Page_OnLoaded(){
         if(appInstance != null) {
           SetFramePage(appInstance.toString(), 600);
         }
+
+        instanceHelper.SetInstanceEntryPoint("/main.html");
       }
       catch(e) {
         console.log(e.toString());
