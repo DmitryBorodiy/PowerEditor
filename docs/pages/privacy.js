@@ -6,14 +6,6 @@ import {
   provideFluentDesignSystem
 } from "https://unpkg.com/@fluentui/web-components@2.0.0";
 
-import {
-  FeedbackHelper
-} from "/helpers/FeedbackHelper.js";
-
-import {
-  WebAppInstanceHelper
-} from "/helpers/WebAppInstanceHelper.js";
-
 provideFluentDesignSystem().register(allComponents);
 
 //UI elements
@@ -27,8 +19,7 @@ window.loaded = function(){
 
 function ContactDeveloper_UICommand(args){
   try {
-    var feedback = new FeedbackHelper();
-    feedback.ContactDeveloper();
+    window.open("mailto:dima.borodiy@outlook.com");
   }
   catch(e){
     console.log(e.toString());
