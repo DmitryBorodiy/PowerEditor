@@ -1,4 +1,4 @@
-@media (prefers-color-scheme: light){
+﻿@media (prefers-color-scheme: light){
   body{
     background-color: rgb(224, 224, 224);
     color: rgb(20, 20, 20);
@@ -56,7 +56,7 @@
   }
 
   #start-pane{
-    background-image: url('/assets/docs-dark.jpg');
+    background-image: url('/PowerEditor/assets/docs-dark.jpg');
   }
 }
 
