@@ -1,4 +1,4 @@
-﻿@media (prefers-color-scheme: light){
+@media (prefers-color-scheme: light){
   body{
     background-color: rgb(224, 224, 224);
     color: rgb(20, 20, 20);
@@ -19,7 +19,7 @@
     -webkit-backdrop-filter: blur(45px);
   }
 
-  .footer-ui{
+  footer {
     background-color: rgb(246, 246, 246);
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
   }
@@ -50,7 +50,7 @@
     -webkit-backdrop-filter: blur(45px);
   }
 
-  .footer-ui{
+  footer {
     background-color: rgb(52, 52, 52);
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
   }
@@ -103,7 +103,7 @@ b{
   width: 100%;
 }
 
-.footer-ui{
+footer {
   width: 100%;
   height: auto;
   margin-top: 56px;

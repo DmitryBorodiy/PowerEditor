@@ -8,6 +8,10 @@ import {
 } from "../helpers/FeedbackHelper.js";
 
 import {
+  WebAppInstanceHelper
+} from "../helpers/WebAppInstanceHelper.js";
+
+import {
   StandardLuminance,
   baseLayerLuminance,
   fillColor,
@@ -20,6 +24,9 @@ import {
 provideFluentDesignSystem().register(allComponents);
 
 var RootLayout;
+var FooterContactAction;
+var FeedbackFooterAction;
+var PrivacyPolicyAction;
 var FeedbackSubjectBox = document.getElementById("feedback-subject-box");
 var StartPane = document.getElementById("start-pane-content");
 
@@ -27,6 +34,13 @@ window.onload = function(){
   Page_OnLoaded();
 
   RootLayout = document.getElementById("rootLayout");
+  FooterContactAction = document.getElementById("footer-contact-action");
+  FeedbackFooterAction = document.getElementById("feedback-footer-action");
+  PrivacyPolicyAction = document.getElementById("privacy-policy-action");
+    
+  FooterContactAction.addEventListener("click", ContactDeveloper_UICommand);
+  FeedbackFooterAction.addEventListener("click", SendFeedback_UICommand);
+  PrivacyPolicyAction.addEventListener("click", PrivacyPolicyAction_Click);
   
   RootLayout.addEventListener("resize", Page_SizeChanged);
 };
@@ -46,6 +60,15 @@ function ContactDeveloper_UICommand(){
     feedback.ContactDeveloper();
   }
   catch(e){
+    console.log(e.toString());
+  }
+}
+
+function PrivacyPolicyAction_Click(){
+  try {
+    window.document.location.href = "../docs/pages/privacy.html";
+  }
+  catch(e) {
     console.log(e.toString());
   }
 }
@@ -86,6 +109,15 @@ function Page_SizeChanged(args){
     }
   }
   catch(e){
+    console.log(e.toString());
+  }
+}
+
+function SendFeedback_UICommand(args){
+  try {
+    
+  }
+  catch(e) {
     console.log(e.toString());
   }
 }

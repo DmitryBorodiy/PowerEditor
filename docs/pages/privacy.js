@@ -69,10 +69,7 @@ function Page_OnLoaded(){
 
 function SendFeedback_UICommand(args){
   try {
-    var instanceHelper = new WebAppInstanceHelper(true);
-    instanceHelper.SetInstanceEntryPoint("/pages/feedback.html");
-    
-    document.location.href = "/main.html";
+    window.document.location.href = "/PowerEditor/pages/feedback.html";
   }
   catch(e) {
     console.log(e.toString());
