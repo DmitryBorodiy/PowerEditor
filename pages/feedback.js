@@ -8,10 +8,6 @@ import {
 } from "../helpers/FeedbackHelper.js";
 
 import {
-  WebAppInstanceHelper
-} from "../helpers/WebAppInstanceHelper.js";
-
-import {
   StandardLuminance,
   baseLayerLuminance,
   fillColor,
@@ -27,7 +23,9 @@ var RootLayout;
 var FooterContactAction;
 var FeedbackFooterAction;
 var PrivacyPolicyAction;
-var FeedbackSubjectBox = document.getElementById("feedback-subject-box");
+var SendFeedbackAction;
+var FeedbackSubjectBox;
+var FeedbackContentBox;
 var StartPane = document.getElementById("start-pane-content");
 
 window.onload = function(){
@@ -35,12 +33,16 @@ window.onload = function(){
 
   RootLayout = document.getElementById("rootLayout");
   FooterContactAction = document.getElementById("footer-contact-action");
+  FeedbackSubjectBox = document.getElementById("feedback-subject-box");
+  FeedbackContentBox = document.getElementById("description-box");
   FeedbackFooterAction = document.getElementById("feedback-footer-action");
   PrivacyPolicyAction = document.getElementById("privacy-policy-action");
-    
+  SendFeedbackAction = document.getElementById("send-feedback-action");
+  
   FooterContactAction.addEventListener("click", ContactDeveloper_UICommand);
-  FeedbackFooterAction.addEventListener("click", SendFeedback_UICommand);
+  //FeedbackFooterAction.addEventListener("click", SendFeedback_UICommand);
   PrivacyPolicyAction.addEventListener("click", PrivacyPolicyAction_Click);
+  SendFeedbackAction.addEventListener("click", SendFeedback_UICommand);
   
   RootLayout.addEventListener("resize", Page_SizeChanged);
 };
@@ -115,7 +117,13 @@ function Page_SizeChanged(args){
 
 function SendFeedback_UICommand(args){
   try {
+    var subject = FeedbackSubjectBox.value.toString();
+    var message = FeedbackContentBox.value.toString();
     
+    if(subject != null || message != null){
+      var feedback = new FeedbackHelper(true);
+      feedback.SendIssue(subject, message);
+    }
   }
   catch(e) {
     console.log(e.toString());
