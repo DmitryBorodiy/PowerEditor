@@ -1,4 +1,4 @@
-import {
+﻿import {
   StandardLuminance,
   baseLayerLuminance,
   fillColor,
@@ -103,13 +103,18 @@ function Page_OnLoaded(){
       //ShowProgressUI(true, 800);
       RootFrame.src = "pages/home.html";
       
-      var instanceHelper = new WebAppInstanceHelper(true);
-      var appInstance = instanceHelper.GetEntryPoint();
-      
-      console.log(appInstance.toString());
-      
-      if(appInstance != null) {
-        SetFramePage(appInstance.toString(), 600);
+      try {
+        var instanceHelper = new WebAppInstanceHelper(true);
+        var appInstance = instanceHelper.GetEntryPoint();
+        
+        console.log(appInstance.toString());
+        
+        if(appInstance != null) {
+          SetFramePage(appInstance.toString(), 600);
+        }
+      }
+      catch(e) {
+        console.log(e.toString());
       }
     }
     
