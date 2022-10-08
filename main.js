@@ -113,7 +113,7 @@ function Page_OnLoaded(){
           SetFramePage(appInstance.toString(), 600);
         }
 
-        instanceHelper.SetInstanceEntryPoint("main.html");
+        instanceHelper.SetInstanceEntryPoint("pages/home.html");
       }
       catch(e) {
         console.log(e.toString());
