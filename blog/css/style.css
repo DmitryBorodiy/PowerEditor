@@ -6,7 +6,7 @@
 
     .gradient-div {
         background: rgb(246,246,246);
-        background: linear-gradient(0deg, rgba(246,246,246,1) 12%, rgba(255,255,255,0) 100%);
+        background: linear-gradient(0deg, rgba(246, 246, 246, 1) 1%, rgba(255,255,255,0) 100%);
     }
 
     .fluent-badge {
