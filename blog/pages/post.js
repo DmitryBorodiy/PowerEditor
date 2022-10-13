@@ -20,7 +20,7 @@ function Page_OnLoaded(){
             link.href = "../css/style.css";
             document.getElementsByTagName("head")[0].appendChild(link);
 
-            debugger;
+            //debugger;
         }
     }
     catch(e){
