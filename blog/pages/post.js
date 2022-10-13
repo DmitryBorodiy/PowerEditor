@@ -4,11 +4,19 @@
 
 function Page_OnLoaded(){
     try{
+        var browser = (function (agent) {
+            switch (true) {
+                case agent.indexOf("edge") > -1: return "EdgeHtml";
+                case agent.indexOf("edg") > -1: return "Chromium";
+                default: return "other";
+            }
+        })(window.navigator.userAgent.toLowerCase());
+
         var link = document.createElement("link");
         link.type = "text/css";
         link.rel = "stylesheet";
 
-        if(isChromium() == true){
+        if(browser == "Chromium"){
             link.href = "../css/style.css";
             document.getElementsByTagName("head")[0].appendChild(link);
 
