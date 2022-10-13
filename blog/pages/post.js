@@ -47,6 +47,7 @@ function SetStyle(style){
         }
 
         document.getElementsByTagName("head")[0].appendChild(link);
+        console.log("Works!");
     }
     catch(e) {
         console.log(e.toString());
