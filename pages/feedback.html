@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
   <head>
     <meta charset="UTF-8" />
@@ -21,7 +21,7 @@
     <div id="start-pane" style="height: auto;">
       <span id="start-pane-content" style="padding-left: 45px; padding-top: 132px; padding-bottom: 80px; position: relative; display: inline-block; color: white;">
         <h1 id="start-pane-title">Provide feedback!</h1>
-        <p style="max-width: 350px;">
+        <p style="max-width: 430px;">
           Here you can provide your user experience stuff and share
           your ideas and suggestions for us.
         </p>
@@ -34,13 +34,44 @@
       <form id="feedback-form">
         <fluent-text-field id="feedback-subject-box" appearance="outline" placeholder="Enter feedback subject" style="width: 100%; max-width: 360px;">Feedback subject</fluent-text-field>
         <div>
-        <fluent-text-area id="description-box" rows="20" placeholder="Describe your experience" height="90px" style="margin-top: 10px; width: 100%; max-width: 360px;">Feedback content</fluent-text-area>
+        <fluent-text-area id="description-box" rows="20" resize="both" placeholder="Describe your experience" height="90px" style="margin-top: 10px; width: 100%; max-width: 360px;">Feedback content</fluent-text-area>
         </div>
         <br />
         <fluent-button id="send-feedback-action" appearance="accent" style="height: 36px; width: 120px;">
           Send feedback
         </fluent-button>
       </form>
+    </section>
+    <br />
+    <section id="feedback-paths" style="padding-left: 45px; padding-right: 42px;">
+      <h3>You can also do this</h3>
+      <div style="display: table; text-align: left;">
+        <fluent-card id="feedback-tips" style="height: 330px; width: 380px; display: inline-block; margin: 5px;">
+          <div style="margin: 26px;">
+            <img height="60px" width="60px" src="https://img.icons8.com/fluency/96/000000/microsoft-tips.png" />
+            <h2 style="font-size: 28px;">Feedback tips</h2>
+            <p style="font-size: 15px; top: -10px; position: relative;">
+              Make your title concise and descriptive. 
+              This will help developers find and upvote your feedback.
+              Send one thought per feedback. 
+              Try to describe the problem or suggestion in more detail so that 
+              we can understand you and act accordingly with your feedback.
+            </p>
+          </div>
+        </fluent-card>
+        <fluent-card style="height: 330px; width: 380px; display: inline-block; margin: 5px;">
+          <div style="margin: 26px;">
+            <img height="60px" width="60px" src="../assets/store-logo.png" />
+            <h2 style="font-size: 28px;">Send review</h2>
+            <p style="font-size: 15px; top: -10px; position: relative;">
+              Send review about app to Microsoft Store.
+              Try to express yourself as precisely and clearly as possible. 
+              This review will be posted to everyone.
+            </p>
+            <fluent-button id="ms-store-button" appearance="accent" style="position: relative; top: 0px; right: 0px; justify-content: normal;">Open Microsoft Store</fluent-button>
+          </div>
+        </fluent-card>
+      </div>
     </section>
     <!-- Feedback form end region -->
     <!-- Footer region -->

@@ -1,7 +1,12 @@
-import {
+﻿import {
   ThemeHelper,
   RequestedTheme
 } from "../helpers/ThemeHelper.js";
+
+import{
+  DeviceHelper,
+  KnownDeviceOS
+} from "../helpers/DeviceHelper.js";
 
 import {
   FeedbackHelper
@@ -26,6 +31,7 @@ var PrivacyPolicyAction;
 var SendFeedbackAction;
 var FeedbackSubjectBox;
 var FeedbackContentBox;
+var MSStoreButton;
 var StartPane = document.getElementById("start-pane-content");
 
 window.onload = function(){
@@ -38,11 +44,13 @@ window.onload = function(){
   FeedbackFooterAction = document.getElementById("feedback-footer-action");
   PrivacyPolicyAction = document.getElementById("privacy-policy-action");
   SendFeedbackAction = document.getElementById("send-feedback-action");
+  MSStoreButton = document.getElementById("ms-store-button");
   
   FooterContactAction.addEventListener("click", ContactDeveloper_UICommand);
   //FeedbackFooterAction.addEventListener("click", SendFeedback_UICommand);
   PrivacyPolicyAction.addEventListener("click", PrivacyPolicyAction_Click);
   SendFeedbackAction.addEventListener("click", SendFeedback_UICommand);
+  MSStoreButton.addEventListener("click", InstallOrGetApp);
   
   RootLayout.addEventListener("resize", Page_SizeChanged);
 };
@@ -96,6 +104,23 @@ function ThemeInitialize(){
   }
 }
 
+function InstallOrGetApp(){
+  try{
+    var deviceHelper = new DeviceHelper(true);
+    var currentOS = deviceHelper.GetCurrentDeviceOSInfo();
+    
+    if(currentOS.toString() == KnownDeviceOS.Windows){
+      window.open("ms-windows-store://pdp/?productid=9NCXLRSKPL9K");
+    }
+    else{
+      window.open("https://apps.microsoft.com/store/detail/power-editor-powerful-text-editor-for-windows/9NCXLRSKPL9K");
+    }
+  }
+  catch(e){
+    console.log(e.toString());
+  }
+}
+
 function Page_SizeChanged(args){
   try {
     var pageWidth = parseInt(rootLayout.clientWidth);
@@ -121,8 +146,10 @@ function SendFeedback_UICommand(args){
     var message = FeedbackContentBox.value.toString();
     
     if(subject != null || message != null){
-      var feedback = new FeedbackHelper(true);
-      feedback.SendIssue(subject, message);
+      window.open(
+        "mailto:dima.borodiy@outlook.com?body=" 
+        + message.toString() 
+        + "&subject=" + subject.toString());
     }
   }
   catch(e) {

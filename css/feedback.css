@@ -1,4 +1,4 @@
-body{
+﻿body{
     padding: 0px;
     margin: 0px;
 }
@@ -63,6 +63,10 @@ b{
   display: flex;
   vertical-align: center;
   align-content: stretch;
+}
+
+#description-box textarea {
+    height: 200px;
 }
 
 @keyframes page-transition{
