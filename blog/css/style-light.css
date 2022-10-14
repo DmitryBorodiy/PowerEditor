@@ -1,4 +1,4 @@
-﻿h1{
+h1{
     font-weight: lighter;
     font-size: 42px;
 }
@@ -9,6 +9,11 @@ body{
   font-family: 'Segoe UI', sans-serif;
   background-color: rgb(246, 246, 246);
   color: rgb(32, 32, 32);
+}
+
+p {
+  font-size: 20px;
+  font-weight: lighter;
 }
 
 #fluent-provider{

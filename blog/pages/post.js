@@ -1,6 +1,50 @@
-﻿window.onload = function(){
-    Page_OnLoaded();
+import {
+  StandardLuminance,
+  baseLayerLuminance,
+  fillColor,
+  allComponents,
+  accentBaseColor,
+  provideFluentDesignSystem,
+  SwatchRGB
+} from "https://unpkg.com/@fluentui/web-components";
+
+import {
+  ThemeHelper,
+  RequestedTheme
+} from "../helpers/ThemeHelper.js";
+
+provideFluentDesignSystem().register(allComponents);
+
+window.onload = function(){
+  Page_OnLoaded();
+  ThemeInitialize();
 };
+
+function ThemeInitialize() {
+  try {
+    let themeDetector = new ThemeHelper(true);
+
+    if (themeDetector != null) {
+      var theme = themeDetector.GetCurrentTheme().toString();
+
+      if (theme == RequestedTheme.Light) {
+        console.log("Light mode.");
+        
+        var root = document.getElementById("fluent-design-provider");
+        baseLayerLuminance.setValueFor(root, StandardLuminance.LightMode);
+      }
+      else if (theme == RequestedTheme.Dark) {
+        console.log("Dark mode.");
+        
+        var root = document.getElementById("fluent-design-provider");
+        baseLayerLuminance.setValueFor(root, StandardLuminance.DarkMode);
+      }
+    }
+  }
+  catch (e) {
+    console.log(e.toString());
+  }
+}
 
 function Page_OnLoaded(){
     try{

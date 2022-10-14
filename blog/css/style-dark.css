@@ -1,4 +1,12 @@
-﻿h1{
+@media (prefers-color-scheme: light){
+  
+}
+
+@media (prefers-color-scheme: dark){
+  
+}
+
+h1{
     font-weight: lighter;
     font-size: 42px;
 }
@@ -9,6 +17,27 @@ body{
   font-family: 'Segoe UI', sans-serif;
   background-color: rgb(32, 32, 32);
   color: rgb(246, 246, 246);
+}
+
+p {
+  font-size: 20px;
+  font-weight: lighter;
+}
+
+.img-container {
+  padding-left: 32px;
+  padding-right: 32px;
+  text-align: center;
+  display: table;
+}
+
+.post-img {
+  display: inline-block;
+  border-radius: 5px;
+  max-width: 500px;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 #fluent-provider{
