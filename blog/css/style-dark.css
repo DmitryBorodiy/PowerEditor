@@ -17,6 +17,7 @@ body{
   font-family: 'Segoe UI', sans-serif;
   background-color: rgb(32, 32, 32);
   color: rgb(246, 246, 246);
+  overflow-x: hidden;
 }
 
 p {
@@ -37,6 +38,13 @@ p {
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.app-icon{
+  background-color: rgb(24, 24, 24);
+  box-shadow: 0 5px 9px rgba(0, 0, 0, 0.4);
+  border-radius: 8px;
+  padding: 16px;
 }
 
 #fluent-provider{

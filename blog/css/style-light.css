@@ -9,6 +9,7 @@ body{
   font-family: 'Segoe UI', sans-serif;
   background-color: rgb(246, 246, 246);
   color: rgb(32, 32, 32);
+  overflow-x: hidden;
 }
 
 p {
