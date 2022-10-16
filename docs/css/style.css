@@ -1,4 +1,4 @@
-@media (prefers-color-scheme: light){
+﻿@media (prefers-color-scheme: light){
   body{
     background-color: rgb(224, 224, 224);
     color: rgb(20, 20, 20);
@@ -25,7 +25,13 @@
   }
 
   #start-pane{
-    background-image: url('/assets/docs.jpg');
+    background-image: url('../assets/docs.jpg');
+  }
+
+  [class^="panel-"] {
+    background-color: #FFFFFF;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
   }
 }
 
@@ -56,7 +62,13 @@
   }
 
   #start-pane{
-    background-image: url('/PowerEditor/assets/docs-dark.jpg');
+    background-image: url('../assets/docs-dark.jpg');
+  }
+
+  [class^="panel-"] {
+    background-color: #070707;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
   }
 }
 
@@ -133,4 +145,23 @@ footer {
   align-content: center;
   align-items: center;
   text-align: left;
+}
+
+.staggered-panel{
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  grid-gap: 0.8rem;
+  margin: 0 auto;
+  max-width: 1200px;
+  height: 400px;
+  padding-left: 40px;
+}
+
+.card-ui{
+  width: 100%;
+  height: 100%;
+}
+
+#panel-1{
+  grid-column: span 7;
 }

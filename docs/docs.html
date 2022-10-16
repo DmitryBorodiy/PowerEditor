@@ -17,17 +17,78 @@
   </head>
   
   <body id="rootLayout">
-    <section id="content-header">
-      <div id="start-pane">
-        <span style="padding-left: 45px; position: relative; display: inline-block; top: 125px;">
-          <h1 id="start-pane-title">Welcome to Power Editor docs!</h1>
-          <p style="max-width: 350px;">
-            Here you can find documentation from the developers, which
-            may help you get a better user experience.
-          </p>
-          <fluent-button appearance="accent" style="position: relative; top: 10px;" onclick="window.open('mailto:dima.borodiy@outlook.com');">Ask developers</fluent-button>
-        </span>
-      </div>
-    </section>
+    <fluent-design-system-provider id="fluent-design-provider">
+        <section id="content-header">
+        <div id="start-pane">
+            <span style="padding-left: 45px; position: relative; display: inline-block; top: 125px;">
+            <h1 id="start-pane-title">Welcome to Power Editor docs!</h1>
+            <p style="max-width: 350px;">
+                Here you can find documentation from the developers, which
+                may help you get a better user experience.
+            </p>
+            <fluent-button appearance="accent" style="position: relative; top: 10px;" onclick="window.open('mailto:dima.borodiy@outlook.com');">Ask developers</fluent-button>
+            </span>
+        </div>
+        </section>
+        <br />
+        <section id="content">
+            <h2 style="padding-left: 40px;">All docs</h2><br />
+            <main class="staggered-panel">
+                <div id="panel-1" style="min-width: 280px;">
+                    <fluent-card class="card-ui">
+                        <div style="padding: 25px;">
+                            <span style="text-align: center; width: 100%; display: block; padding-top: 18px;">
+                                <img src="https://img.icons8.com/fluency/144/000000/windows-defender.png" height="115px" width="115px" />
+                            </span>
+                            <span style="display: block; width: 100%; padding-top: 15px;">
+                                <h3>Privacy policy</h3>
+                                <p>
+                                    A privacy policy is a statement or legal document that 
+                                    discloses some or all of the ways a party gathers, uses, discloses, 
+                                    and manages a customer or client's data using by Power Editor.
+                                </p>
+                                <fluent-button appearance="accent" onclick="document.location.href = 'pages/privacy.html';">Learn more</fluent-button>
+                            </span>
+                        </div>
+                    </fluent-card>
+                </div>
+            </main>
+        </section><br />
+        <br />
+        <footer class="footer-ui">
+            <div id="footer-ui-content" class="table" style="padding-top: 22px; padding-bottom: 56px; display: table;">
+                <fluent-anchor id="footer-contact-action" style="display: inline-block; margin: 4px; margin-top: 8px;">
+                    <span style="margin: 10px; display: block;">
+                        <img height="22px" width="22px" src="https://img.icons8.com/fluency/96/000000/microsoft-people.png" style="position: relative; top: 2px;" />
+                        <a style="font-size: 14px; margin-left: 6px; position: relative; bottom: 3px;">Contact</a>
+                    </span>
+                </fluent-anchor>
+                <fluent-anchor id="feedback-footer-action" style="display: inline-block; margin: 4px;">
+                    <span style="margin: 10px; display: block;">
+                        <img height="22px" width="22px" src="https://img.icons8.com/fluency/96/000000/feedback-hub.png" style="position: relative; top: 2px;" />
+                        <a style="font-size: 14px; margin-left: 6px; position: relative; bottom: 3px;">Provide feedback</a>
+                    </span> 
+                </fluent-anchor>
+                <fluent-anchor style="display: inline-block; margin: 4px; margin-top: 15px;">
+                    <span style="margin: 10px; display: block;">
+                        <img height="22px" width="22px" src="/assets/store-logo.png" style="position: relative; top: 2px;" />
+                        <a style="font-size: 14px; margin-left: 6px; position: relative; bottom: 3px;">Microsoft Store</a>
+                    </span>
+                </fluent-anchor>
+                <fluent-anchor style="display: inline-block; margin: 4px; margin-top: 15px;">
+                    <span style="margin: 10px; display: block;">
+                        <img height="22px" width="22px" src="https://img.icons8.com/fluency/96/000000/windows-defender.png" style="position: relative; top: 2px;" />
+                        <a style="font-size: 14px; margin-left: 6px; position: relative; bottom: 3px;">Privacy policy</a>
+                    </span>
+                </fluent-anchor>
+                <fluent-anchor style="display: inline-block; margin: 4px; margin-top: 15px;">
+                    <span style="margin: 10px; display: block;">
+                        <img height="22px" width="22px" src="https://img.icons8.com/fluency/96/000000/twitter.png" style="position: relative; top: 2px;" />
+                        <a style="font-size: 14px; margin-left: 6px; position: relative; bottom: 2px;">Twitter</a>
+                    </span>
+                </fluent-anchor>
+            </div>
+        </footer>
+    </fluent-design-system-provider>
   </body>
 </html>
