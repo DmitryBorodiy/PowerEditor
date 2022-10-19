@@ -1,4 +1,4 @@
-@media (prefers-color-scheme: light) {
+﻿@media (prefers-color-scheme: light) {
     body {
         background-color: rgb(246, 246, 246);
         color: rgb(32, 32, 32);
@@ -11,6 +11,10 @@
 
     .fluent-badge {
         background-color: rgba(255, 255, 255, 0.6);
+    }
+
+    #header-section {
+        background-image: url('../assets/blog.jpg');
     }
 }
 
@@ -30,6 +34,10 @@
 
     .fluent-badge {
         background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    #header-section {
+        background-image: url('../assets/blog.jpg');
     }
 }
 
@@ -108,4 +116,16 @@ p {
     backdrop-filter: blur(60px);
     -webkit-backdrop-filter: blur(60px);
     position: inline-block;
+}
+
+#header-section{
+    height: 520px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    display: table;
+    align-content: center;
+    align-items: center;
+    text-align: left;
 }

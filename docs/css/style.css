@@ -152,9 +152,9 @@ footer {
   grid-template-columns: repeat(16, 1fr);
   grid-gap: 0.8rem;
   margin: 0 auto;
-  max-width: 1200px;
   height: 400px;
   padding-left: 40px;
+  padding-right: 40px;
 }
 
 .card-ui{
