@@ -1,49 +1,20 @@
-//UI elements
-var Body = document.body;
+﻿//UI elements
 var GettingStartedDiv;
+var LaptopScreen;
+var AppScreen1;
 
 window.onload = function(){
   Page_OnLoaded();
-  Body.onresize = function(){
-    Page_OnResize();
-  };
 };
-
-function AnimateTextTyping(text) {
-  try {
-    var string = text.toString();
-    var array = string.split("");
-    var timer;
-
-    function frameLooper() {
-      if (array.length > 0) {
-        document.getElementById("getting-started-title").innerHTML += array.shift();
-      } else {
-        clearTimeout(timer);
-      }
-
-      loopTimer = setTimeout('frameLooper()', 70);
-    }
-
-    frameLooper();
-  }
-  catch (e) {
-    console.log(e.toString());
-  }
-}
 
 function Page_OnLoaded(){
     try{
-        GettingStartedDiv = document.getElementById("ui-page-transition");
+        LaptopScreen = document.getElementById("screenshot-ui");
+        AppScreen1 = document.getElementById("app-screen");
 
-        //Animation interop
-        if(GettingStartedDiv.classList.contains("ui-page-transition")){
-           GettingStartedDiv.classList.remove("ui-page-transition");
-           GettingStartedDiv.classList.add("ui-page-transition"); 
-        }
-        else {
-            GettingStartedDiv.classList.add("ui-page-transition");
-        }
+        document.getElementById("rootLayout").onresize = function(){
+            Page_OnResize();
+        };
     }
     catch(e){
         console.log(e.toString);
@@ -51,17 +22,39 @@ function Page_OnLoaded(){
 }
 
 function Page_OnResize(){
-  try{
-    var pageWidth = parseInt(rootLayout.clientWidth);
+  try {
+    var pageWidth = parseInt(document.getElementById("rootLayout").clientWidth);
     
     if(pageWidth != null){
       if(pageWidth <= 1050){
         SetMobileView();
       }
-      else if(pageWidth > 1050){
+      else if(pageWidth >= 1050){
         SetDefaultView();
       }
-    } 
+
+      if(pageWidth <= 850){
+          if(LaptopScreen != null){
+              LaptopScreen.style.height = "500px";
+          }
+      }
+      else if(pageWidth >= 850){
+          if(LaptopScreen != null){
+              LaptopScreen.style.height = "720px";
+          }
+      }
+
+      if(pageWidth <= 535){
+          if(AppScreen1 != null){
+              AppScreen1.style.height = "280px";
+          }
+      }
+      else if(pageWidth >= 535){
+          if(AppScreen1 != null){
+              AppScreen1.style.height = "460px";
+          }
+      }
+    }
   }
   catch(e){
     console.log(e.toString());

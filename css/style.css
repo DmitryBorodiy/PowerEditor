@@ -517,3 +517,29 @@ iframe{
   border-radius: 5px;
   border: none;
 }
+
+#content{
+    width: 100%;
+    text-align: center;
+    position: relative;
+    padding-top: 60px;
+}
+
+#app-rect{
+    height: 600px;
+    width: 100%;
+    margin-top: 32px;
+    display: table;
+}
+
+#app-screen{
+    height: 520px;
+    background-image: url('../assets/app-screen.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 8px;
+    display: block;
+    margin-left: 35px;
+    margin-right: 35px;
+}

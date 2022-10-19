@@ -22,6 +22,8 @@ provideFluentDesignSystem().register(allComponents);
 
 //UI controls
 var GetAppButton = document.getElementById("get-app-button");
+var LaptopScreen;
+var AppScreen1;
 
 window.onload = function(){
   ThemeInitialize();
@@ -69,11 +71,49 @@ function ThemeInitialize(){
 
 function Page_OnLoaded(){
     try{
+        LaptopScreen = document.getElementById("screenshot-ui");
+        AppScreen1 = document.getElementById("app-screen");
+
+        document.getElementById("rootLayout").onresize = function(){
+            Page_OnResize();
+        };
+
         if(GetAppButton != null){
             GetAppButton.addEventListener("click", InstallOrGetApp);
         }
     }
     catch(e){
+        console.log(e.toString());
+    }
+}
+
+function Page_OnResize(){
+    try {
+        var pageWidth = parseInt(document.getElementById("rootLayout").clientWidth);
+
+        if(pageWidth <= 850){
+            if(LaptopScreen != null){
+                LaptopScreen.style.height = "500px";
+            }
+        }
+        else if(pageWidth >= 850){
+            if(LaptopScreen != null){
+                LaptopScreen.style.height = "720px";
+            }
+        }
+
+        if(pageWidth <= 535){
+            if(AppScreen1 != null){
+                AppScreen1.style.height = "280px";
+            }
+        }
+        else if(pageWidth >= 535){
+            if(AppScreen1 != null){
+                AppScreen1.style.height = "520px";
+            }
+        }
+    }
+    catch(e) {
         console.log(e.toString());
     }
 }

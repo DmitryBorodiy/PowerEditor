@@ -119,7 +119,7 @@ p {
 }
 
 #header-section{
-    height: 520px;
+    height: 576px;
     width: 100%;
     background-repeat: no-repeat;
     background-position: center center;
@@ -127,5 +127,6 @@ p {
     display: table;
     align-content: center;
     align-items: center;
-    text-align: left;
+    text-align: center;
+    color: rgb(24, 24, 24);
 }
