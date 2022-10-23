@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-      http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <url>
+    <loc>https://dmitryborodiy.github.io/PowerEditor/main.html</loc>
+    <lastmod>2022-10-23T10:22:19+00:00</lastmod>
+    <loc>https://dmitryborodiy.github.io/PowerEditor/index.html</loc>
+    <lastmod>2022-10-23T10:22:19+00:00</lastmod>
     <loc>https://dmitryborodiy.github.io/PowerEditor/</loc>
     <lastmod>2022-10-23T10:22:19+00:00</lastmod>
     <loc>https://dmitryborodiy.github.io/PowerEditor/docs</loc>
