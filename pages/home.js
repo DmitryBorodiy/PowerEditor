@@ -1,4 +1,4 @@
-﻿//UI elements
+//UI elements
 var GettingStartedDiv;
 var LaptopScreen;
 var AppScreen1;

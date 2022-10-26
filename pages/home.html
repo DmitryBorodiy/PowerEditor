@@ -125,8 +125,28 @@
             <span class="badge">Features</span>
             <h1 style="margin-top: 16px;">It already does that.</h1>
             <p style="margin-top: -18px; width: 100%; display: inline-block; max-width: 560px;">
-              Tabs & multiple workspaces? File content prteview? Hybrid, productive and powerful work? Yes it's all you can with Power Editor!
+              Tabs & multiple workspaces? File content preview? Hybrid, productive and powerful work? Yes it's all you can with Power Editor!
             </p>
+            <fluent-tabs activeid="tabs" style="display: inline-block; position: relative;">
+              <!-- Tabs -->
+              <fluent-tab id="tabs" style="margin-left: 10px; margin-right: 10px;">Tabs</fluent-tab>
+              <fluent-tab id="files" style="margin-left: 10px; margin-right: 10px;">Files</fluent-tab>
+              <fluent-tab id="editor" style="margin-left: 10px; margin-right: 10px;">Editor</fluent-tab>
+              <fluent-tab id="xaml" style="margin-left: 10px; margin-right: 10px;">XAML Editing</fluent-tab>
+              <!-- Tabs id's -->
+              <fluent-tab-panel id="tabsPanel">
+                <span class="app-screen-ui"></span>
+              </fluent-tab-panel>
+              <fluent-tab-panel id="filesPanel">
+                <span class="app-screen-ui"></span>
+              </fluent-tab-panel>
+              <fluent-tab-panel id="editorPanel">
+                <span class="app-screen-ui"></span>
+              </fluent-tab-panel>
+              <fluent-tab-panel id="xamlPanel">
+                <span class="app-screen-ui"></span>
+              </fluent-tab-panel>
+            </fluent-tabs>
           </div>
         </section>
     </section>
