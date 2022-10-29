@@ -31,7 +31,9 @@ var PrivacyPolicyAction;
 var SendFeedbackAction;
 var FeedbackSubjectBox;
 var FeedbackContentBox;
+var FooterMSStoreButton;
 var MSStoreButton;
+var TwitterButton;
 var StartPane = document.getElementById("start-pane-content");
 
 window.onload = function(){
@@ -44,14 +46,18 @@ window.onload = function(){
   FeedbackFooterAction = document.getElementById("feedback-footer-action");
   PrivacyPolicyAction = document.getElementById("privacy-policy-action");
   SendFeedbackAction = document.getElementById("send-feedback-action");
+  FooterMSStoreButton = document.getElementById("footer-ms-store-button");
   MSStoreButton = document.getElementById("ms-store-button");
+  TwitterButton = document.getElementById("twitter-button");
   
   FooterContactAction.addEventListener("click", ContactDeveloper_UICommand);
-  //FeedbackFooterAction.addEventListener("click", SendFeedback_UICommand);
+  FeedbackFooterAction.addEventListener("click", SendFeedback_UICommand);
   PrivacyPolicyAction.addEventListener("click", PrivacyPolicyAction_Click);
   SendFeedbackAction.addEventListener("click", SendFeedback_UICommand);
-  MSStoreButton.addEventListener("click", InstallOrGetApp);
-  
+  MSStoreButton.addEventListener("click", SendStoreReview);
+  FooterMSStoreButton.addEventListener("click", InstallOrGetApp);
+  TwitterButton.addEventListener("click", TwitterButton_Click);
+
   RootLayout.addEventListener("resize", Page_SizeChanged);
 };
 
@@ -121,6 +127,15 @@ function InstallOrGetApp(){
   }
 }
 
+function SendStoreReview(){
+  try {
+    window.open("ms-windows-store://review/?ProductId=9NCXLRSKPL9K");
+  }
+  catch(e) {
+    console.log(e.toString());
+  }
+}
+
 function Page_SizeChanged(args){
   try {
     var pageWidth = parseInt(rootLayout.clientWidth);
@@ -140,7 +155,7 @@ function Page_SizeChanged(args){
   }
 }
 
-function SendFeedback_UICommand(args){
+function SendFeedback_UICommand(){
   try {
     var subject = FeedbackSubjectBox.value.toString();
     var message = FeedbackContentBox.value.toString();
@@ -151,6 +166,15 @@ function SendFeedback_UICommand(args){
         + message.toString() 
         + "&subject=" + subject.toString());
     }
+  }
+  catch(e) {
+    console.log(e.toString());
+  }
+}
+
+function TwitterButton_Click(){
+  try {
+    window.open("https://twitter.com/dev_dmitriy");
   }
   catch(e) {
     console.log(e.toString());

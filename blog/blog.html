@@ -27,11 +27,79 @@
                             All announcements will be posted here in the future.
                         </p>
                         <div style="display: table; width: 100%; position: relative; top: -18px;">
-                            <fluent-button appearance="accent" style="height: 42px; width: 160px;">Contact developers</fluent-button>
-                            <fluent-button style="margin-left: 8px; height: 42px; width: 112px;">Send review</fluent-button>
+                            <fluent-button id="contact-developers-button" appearance="accent" style="height: 42px; width: 160px;">Contact developers</fluent-button>
+                            <fluent-button id="send-feedback-action" style="margin-left: 8px; height: 42px; width: 112px;">Send review</fluent-button>
                         </div>
                     </div>
                 </section>
+                <section id="content">
+                    <h2 style="padding-left: 40px; padding-top: 15px;">News & changes</h2><br />
+                    <main class="staggered-panel" style="position: relative; top: -12px;">
+                        <div id="panel-1" style="min-width: 280px;">
+                            <fluent-card class="card-ui">
+                                <span class="card-img" style="background-image: url('images/update2.4.png'); height: 210px; display: block;"></span>
+                                <div style="padding-left: 20px; padding-right: 20px;">
+                                    <h2 style="font-size: 22px;">Version 2.4(October 2022 update)</h2>
+                                    <p style="font-size: 16px;">
+                                        See what's new in this update. <br />
+                                        Here are the changes regarding version 2.4 including new <br /> 
+                                        functionality and bug fixes. <br />
+                                    </p>
+                                    <a href="pages/version2.4.html"><fluent-button appearance="accent">Learn more</fluent-button></a>
+                                </div>
+                            </fluent-card>
+                        </div>
+                        <div id="panel-2" style="min-width: 280px;">
+                            <fluent-card class="card-ui">
+                                <span class="card-img" style="background-image: url(''); height: 210px; display: block;"></span>
+                                <div style="padding-left: 20px; padding-right: 20px;">
+                                    <h2 style="font-size: 22px;">Version 2.4.1(October 2022 update 1)</h2>
+                                    <p style="font-size: 16px;">
+                                        See what's new in this update. <br />
+                                        Here are the changes regarding version 2.4.1 including new <br /> 
+                                        functionality and bug fixes. <br />
+                                    </p>
+                                    <a><fluent-button appearance="accent">Learn more</fluent-button></a>
+                                </div>
+                            </fluent-card>
+                        </div>
+                    </main>
+                </section>
+                <br />
+                <footer class="footer-ui">
+                    <div id="footer-ui-content" class="table" style="width: 100%; padding-top: 22px; padding-bottom: 56px; display: table;">
+                        <fluent-anchor id="footer-contact-action" style="display: inline-block; margin: 4px; margin-top: 8px;">
+                            <span style="margin: 10px; display: block;">
+                                <img height="22px" width="22px" src="https://img.icons8.com/fluency/96/000000/microsoft-people.png" style="position: relative; top: 2px;" />
+                                <a style="font-size: 14px; margin-left: 6px; position: relative; bottom: 3px;">Contact</a>
+                            </span>
+                        </fluent-anchor>
+                        <fluent-anchor id="feedback-footer-action" style="display: inline-block; margin: 4px;">
+                            <span style="margin: 10px; display: block;">
+                                <img height="22px" width="22px" src="https://img.icons8.com/fluency/96/000000/feedback-hub.png" style="position: relative; top: 2px;" />
+                                <a style="font-size: 14px; margin-left: 6px; position: relative; bottom: 3px;">Provide feedback</a>
+                            </span> 
+                        </fluent-anchor>
+                        <fluent-anchor id="ms-store-button" style="display: inline-block; margin: 4px; margin-top: 15px;">
+                            <span style="margin: 10px; display: block;">
+                                <img height="22px" width="22px" src="/assets/store-logo.png" style="position: relative; top: 2px;" />
+                                <a style="font-size: 14px; margin-left: 6px; position: relative; bottom: 3px;">Microsoft Store</a>
+                            </span>
+                        </fluent-anchor>
+                        <fluent-anchor id="privacy-policy-action" style="display: inline-block; margin: 4px; margin-top: 15px;">
+                            <span style="margin: 10px; display: block;">
+                                <img height="22px" width="22px" src="https://img.icons8.com/fluency/96/000000/windows-defender.png" style="position: relative; top: 2px;" />
+                                <a style="font-size: 14px; margin-left: 6px; position: relative; bottom: 3px;">Privacy policy</a>
+                            </span>
+                        </fluent-anchor>
+                        <fluent-anchor id="twitter-button" style="display: inline-block; margin: 4px; margin-top: 15px;">
+                            <span style="margin: 10px; display: block;">
+                                <img height="22px" width="22px" src="https://img.icons8.com/fluency/96/000000/twitter.png" style="position: relative; top: 2px;" />
+                                <a style="font-size: 14px; margin-left: 6px; position: relative; bottom: 2px;">Twitter</a>
+                            </span>
+                        </fluent-anchor>
+                    </div>
+                </footer>
             </div>
         </fluent-design-system-provider>
     </body>
