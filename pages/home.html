@@ -34,6 +34,10 @@
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script type="module" src="home.js"></script>
     <script type="module" src="home-module.js"></script>
+
+    <!-- Mockup -->
+    <link rel="stylesheet" type="text/css" href="../css/device.css" />
+    <link rel="stylesheet" type="text/css" href="../css/device.min.css" />
   </head>
   
   <body id="rootLayout">
@@ -128,26 +132,40 @@
               Tabs & multiple workspaces? File content preview? Hybrid, productive and powerful work? Yes it's all you can with Power Editor!
             </p>
             <br />
-            <fluent-tabs activeid="tabs" style="display: inline-block; position: relative;">
-              <!-- Tabs -->
-              <fluent-tab id="tabs" style="margin-left: 10px; margin-right: 10px;">Tabs</fluent-tab>
-              <fluent-tab id="files" style="margin-left: 10px; margin-right: 10px;">Files</fluent-tab>
-              <fluent-tab id="editor" style="margin-left: 10px; margin-right: 10px;">Editor</fluent-tab>
-              <fluent-tab id="xaml" style="margin-left: 10px; margin-right: 10px;">XAML Editing</fluent-tab>
-              <!-- Tabs id's -->
-              <fluent-tab-panel id="tabsPanel">
-                <span class="app-screen-ui"></span>
-              </fluent-tab-panel>
-              <fluent-tab-panel id="filesPanel">
-                <span class="app-screen-ui"></span>
-              </fluent-tab-panel>
-              <fluent-tab-panel id="editorPanel">
-                <span class="app-screen-ui"></span>
-              </fluent-tab-panel>
-              <fluent-tab-panel id="xamlPanel">
-                <span class="app-screen-ui"></span>
-              </fluent-tab-panel>
-            </fluent-tabs>
+            <div style="display: inline-block; position: relative;">
+              <fluent-tabs activeid="tabs">
+                <!-- Tabs -->
+                <fluent-tab id="tabs" style="margin-left: 10px; margin-right: 10px;">Tabs</fluent-tab>
+                <fluent-tab id="files" style="margin-left: 10px; margin-right: 10px;">Files</fluent-tab>
+                <fluent-tab id="editor" style="margin-left: 10px; margin-right: 10px;">Editor</fluent-tab>
+                <fluent-tab id="xaml" style="margin-left: 10px; margin-right: 10px;">XAML Editing</fluent-tab>
+                <!-- Tabs id's -->
+                <fluent-tab-panel id="tabsPanel">
+                  <span class="app-screen-ui">
+                    <div>
+                      <div class="device device-surface-book" style="transform: scale(1.2); position: relative; top: 60px;">
+                        <div class="device-frame"><img class="device-screen" src="assets/img/bg-11.jpg" loading="lazy"></div>
+                        <div class="device-stripe"></div>
+                        <div class="device-header"></div>
+                        <div class="device-sensors"></div>
+                        <div class="device-btns"></div>
+                        <div class="device-power"></div>
+                        <div class="device-home"></div>
+                      </div>
+                    </div>
+                  </span>
+                </fluent-tab-panel>
+                <fluent-tab-panel id="filesPanel">
+                  <span class="app-screen-ui"></span>
+                </fluent-tab-panel>
+                <fluent-tab-panel id="editorPanel">
+                  <span class="app-screen-ui"></span>
+                </fluent-tab-panel>
+                <fluent-tab-panel id="xamlPanel">
+                  <span class="app-screen-ui"></span>
+                </fluent-tab-panel>
+              </fluent-tabs>
+            </div>
           </div>
         </section>
     </section>

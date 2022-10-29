@@ -108,6 +108,7 @@ body {
   padding: 0px;
   margin: 0px;
   font-family: 'Segoe UI', sans-serif;
+  overflow-x: hidden;
   height: 100%;
 }
 
