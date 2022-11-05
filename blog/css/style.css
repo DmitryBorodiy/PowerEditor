@@ -177,5 +177,9 @@ footer{
 }
 
 #panel-2{
+    grid-column: span 7;
+}
+
+#panel-3{
     grid-column: span 8;
 }

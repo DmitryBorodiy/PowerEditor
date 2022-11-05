@@ -1,4 +1,4 @@
-import {
+﻿import {
   StandardLuminance,
   baseLayerLuminance,
   fillColor,
@@ -55,6 +55,18 @@ var NavigationViewItems;
 
 window.onload = function(){
   Page_OnLoaded();
+
+  rootLayout = document.getElementById("rootLayout");
+  var pageWidth = parseInt(rootLayout.clientWidth);
+
+  if(pageWidth != null) {
+    if(pageWidth <= 1050) {
+        SetMobileView();
+    }
+    else if (pageWidth > 1050) {
+        SetDefaultView();
+    }
+  }
 };
 
 function ThemeInitialize(){
@@ -195,15 +207,11 @@ function Page_OnLoaded(){
       IsShowNavigationView(false);
     };
     NavigationViewItems.children[2].onclick = function(){
-      SetFramePage("docs/docs.html", 800);
-      IsShowNavigationView(false);
-    };
-    NavigationViewItems.children[3].onclick = function(){
       SetFramePage("pages/feedback.html", 800);
       IsShowNavigationView(false);
     };
-    NavigationViewItems.children[4].onclick = function(){
-      SetFramePage("downloads/downloads.html", 800);
+    NavigationViewItems.children[3].onclick = function(){
+      SetFramePage("https://www.microsoft.com/store/productId/9NLHP5KRXZQ7", 800);
       IsShowNavigationView(false);
     };
     
